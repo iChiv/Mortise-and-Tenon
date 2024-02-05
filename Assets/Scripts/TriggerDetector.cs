@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerDetector : MonoBehaviour
 {
     public bool isInTrigger = false;
-    public Transform targetDirection; // Ä¿±ê·½Ïò
+    public Transform targetDirection; // ç›®æ ‡æ–¹å‘
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,7 +26,7 @@ public class TriggerDetector : MonoBehaviour
 
     bool IsFacingDirection(Transform direction)
     {
-        // ¼ì²éÎïÌåµÄÇ°·½ÊÇ·ñ´óÖÂÖ¸ÏòÄ¿±ê·½ÏòµÄXÖá
+        // æ£€æŸ¥ç‰©ä½“çš„å‰æ–¹æ˜¯å¦å¤§è‡´æŒ‡å‘ç›®æ ‡æ–¹å‘çš„Xè½´
         return Vector3.Dot(transform.forward, direction.right) > 0.9f;
     }
 }
