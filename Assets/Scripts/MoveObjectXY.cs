@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class MoveObjectXY : MonoBehaviour
 {
-    public float moveSpeed = 0.05f; // ¿ØÖÆÒÆ¶¯ËÙ¶È
-    private Rigidbody rb; // Ìí¼Ó¶ÔRigidbody×é¼þµÄÒýÓÃ
+    public float moveSpeed = 0.05f; // ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½Ù¶ï¿½
+    private Rigidbody rb; // ï¿½ï¿½ï¿½Ó¶ï¿½Rigidbodyï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); // »ñÈ¡Rigidbody×é¼þ
+        rb = GetComponent<Rigidbody>(); // ï¿½ï¿½È¡Rigidbodyï¿½ï¿½ï¿½
     }
 
-    void FixedUpdate() // Ê¹ÓÃFixedUpdate¶ø²»ÊÇUpdate
+    void FixedUpdate() // Ê¹ï¿½ï¿½FixedUpdateï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Update
     {
-        // ¼ì²âË®Æ½ÊäÈë£¨AºÍD¼ü£©
-        float horizontalInput = Input.GetAxis("Horizontal"); // A¼üÊÇ-1£¬D¼üÊÇ1
-        // ¼ì²â´¹Ö±ÊäÈë£¨WºÍS¼ü£©
-        float verticalInput = Input.GetAxis("Vertical"); // W¼üÊÇ1£¬S¼üÊÇ-1
+        // ï¿½ï¿½ï¿½Ë®Æ½ï¿½ï¿½ï¿½ë£¨Aï¿½ï¿½Dï¿½ï¿½ï¿½ï¿½
+        float horizontalInput = Input.GetAxis("Horizontal"); // Aï¿½ï¿½ï¿½ï¿½-1ï¿½ï¿½Dï¿½ï¿½ï¿½ï¿½1
+        // ï¿½ï¿½â´¹Ö±ï¿½ï¿½ï¿½ë£¨Wï¿½ï¿½Sï¿½ï¿½ï¿½ï¿½
+        float verticalInput = Input.GetAxis("Vertical"); // Wï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½Sï¿½ï¿½ï¿½ï¿½-1
 
-        // ¸ù¾ÝÊäÈë¼ÆËãÒÆ¶¯·½ÏòºÍ¾àÀë
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½Í¾ï¿½ï¿½ï¿½
         Vector3 moveDirection = new Vector3(horizontalInput, verticalInput, 0);
         Vector3 newPosition = rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
 
-        // Ê¹ÓÃRigidbody.MovePosition¸üÐÂÎïÌåµÄÎ»ÖÃ
+        // Ê¹ï¿½ï¿½Rigidbody.MovePositionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
         rb.MovePosition(newPosition);
     }
 }
