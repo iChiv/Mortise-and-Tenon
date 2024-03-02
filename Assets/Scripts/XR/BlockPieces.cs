@@ -1,16 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Oculus.Interaction;
+using Oculus.Interaction.HandGrab;
 using UnityEngine;
 
 public class BlockPieces : MonoBehaviour
 {
     public Transform correctTransform;
+    private Outline outline;
 
     public bool isPositionedCorrectly { get; private set; } = false;
 
     private bool isBeingDragged = false;
-    
-    // public bool IsPositionedCorrectly { get; private set; } = false;
+
+    public Camera mainCamera;
 
     public GameObject handGrab;
 
@@ -19,19 +24,22 @@ public class BlockPieces : MonoBehaviour
     public AudioClip snapClick;
 
     private AudioSource audioSource;
-    // Start is called before the first frame update
+
+    private float pinchTime;
+    [SerializeField]private float unsnapTime = 0.5f;
+    
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        outline = GetComponent<Outline>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        // if (isBeingDragged)
-        // {
-        //     return;
-        // }
+        if (isBeingDragged)
+        {
+            return;
+        }
 
         if (!isPositionedCorrectly)
         {
@@ -43,7 +51,24 @@ public class BlockPieces : MonoBehaviour
                 SnapIntoPlace();
             }
         }
-        
+        else
+        {
+            bool isPinching = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.5f;
+            
+            if (isPinching)
+            {
+                Ray ray = new Ray(mainCamera.transform.position, mainCamera.transform.forward);
+                RaycastHit hit;
+                pinchTime += Time.deltaTime;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.transform == transform && pinchTime>unsnapTime)
+                    {
+                        StartDragging();
+                    }
+                }
+            }
+        }
     }
 
     void SnapIntoPlace()
@@ -55,6 +80,8 @@ public class BlockPieces : MonoBehaviour
         distanceHandGrab.SetActive(false);
         
         //VFX
+        
+        //SoundFX
         audioSource.PlayOneShot(snapClick);
     }
 
@@ -62,10 +89,24 @@ public class BlockPieces : MonoBehaviour
     {
         isBeingDragged = true;
         isPositionedCorrectly = false;
+        handGrab.SetActive(true);
+        distanceHandGrab.SetActive(true);
     }
 
     public void StopDragging()
     {
         isBeingDragged = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("OVRHand"))
+        {
+            outline.enabled = true;
+        }
+        else
+        {
+            outline.enabled = false;
+        }
     }
 }

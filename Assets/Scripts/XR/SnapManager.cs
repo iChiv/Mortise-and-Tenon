@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SnapManager : MonoBehaviour
 {
+    public int stage;
     public BlockPieces[] blockPieces;
     public GameObject rewardVFX;
     public AudioClip rewardSfxClip;
@@ -52,7 +53,19 @@ public class SnapManager : MonoBehaviour
 
     void NextStage()
     {
-        winSignal.SetActive(true);
+        switch (stage)
+        {
+            case 1:
+                winSignal.SetActive(true);
+                break;
+            case 2:
+                winSignal.SetActive(true);
+                break;
+            case 3:
+                winSignal.SetActive(true);
+                break;
+        }
+        
         //Do sth.!
     }
 }
