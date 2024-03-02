@@ -506,7 +506,6 @@ GameObject:
   - component: {fileID: 89982082}
   - component: {fileID: 89982084}
   - component: {fileID: 89982087}
-  - component: {fileID: 89982086}
   - component: {fileID: 89982085}
   m_Layer: 0
   m_Name: B2
@@ -642,13 +641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 2109997716}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 1989570532}
@@ -751,23 +743,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &89982086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89982078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae87cd3894b44990b9f3146c0947b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!114 &89982087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,7 +1000,6 @@ GameObject:
   - component: {fileID: 104621948}
   - component: {fileID: 104621950}
   - component: {fileID: 104621953}
-  - component: {fileID: 104621952}
   - component: {fileID: 104621951}
   m_Layer: 0
   m_Name: C2
@@ -1161,13 +1135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 789382507}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 1447868676}
@@ -1270,23 +1237,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &104621952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104621944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae87cd3894b44990b9f3146c0947b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!114 &104621953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2520,7 +2470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &191900858
 Transform:
   m_ObjectHideFlags: 0
@@ -3372,13 +3322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 873612145}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982531}
@@ -3878,7 +3821,6 @@ GameObject:
   - component: {fileID: 608240547}
   - component: {fileID: 608240549}
   - component: {fileID: 608240552}
-  - component: {fileID: 608240551}
   - component: {fileID: 608240550}
   m_Layer: 0
   m_Name: A1
@@ -4014,13 +3956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 37204885}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 325683153}
@@ -4123,24 +4058,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &608240551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608240543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae87cd3894b44990b9f3146c0947b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 608240544}
-  m_grabPoints:
-  - {fileID: 608240547}
 --- !u!114 &608240552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4326,7 +4243,6 @@ GameObject:
   - component: {fileID: 626149822}
   - component: {fileID: 626149824}
   - component: {fileID: 626149827}
-  - component: {fileID: 626149826}
   - component: {fileID: 626149825}
   m_Layer: 0
   m_Name: A2
@@ -4462,13 +4378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 480734377}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 1022394705}
@@ -4571,23 +4480,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &626149826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626149818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae87cd3894b44990b9f3146c0947b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!114 &626149827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5358,13 +5250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 651609435}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982528}
@@ -7500,13 +7385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 1153399096}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982525}
@@ -7741,13 +7619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 7509750}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982549}
@@ -8228,13 +8099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 827990805}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982546}
@@ -8339,7 +8203,6 @@ GameObject:
   - component: {fileID: 1188817941}
   - component: {fileID: 1188817943}
   - component: {fileID: 1188817946}
-  - component: {fileID: 1188817945}
   - component: {fileID: 1188817944}
   m_Layer: 0
   m_Name: B1
@@ -8475,13 +8338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 1490050781}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 734557154}
@@ -8584,23 +8440,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1188817945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188817937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae87cd3894b44990b9f3146c0947b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!114 &1188817946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9310,7 +9149,6 @@ GameObject:
   - component: {fileID: 1419044233}
   - component: {fileID: 1419044235}
   - component: {fileID: 1419044238}
-  - component: {fileID: 1419044237}
   - component: {fileID: 1419044236}
   m_Layer: 0
   m_Name: C1
@@ -9446,13 +9284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 1105003649}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 838226788}
@@ -9555,23 +9386,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1419044237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419044229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae87cd3894b44990b9f3146c0947b85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!114 &1419044238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9879,7 +9693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1423621536
 Transform:
   m_ObjectHideFlags: 0
@@ -10406,13 +10220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 1146010353}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982537}
@@ -11223,13 +11030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 2064061031}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982534}
@@ -13197,13 +12997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 1419922231}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982540}
@@ -13796,13 +13589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 1913494290}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982543}
@@ -14507,13 +14293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 1179620919}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982552}
@@ -14532,13 +14311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
   correctTransform: {fileID: 1485064446}
   mainCamera: {fileID: 1145989521}
   handGrab: {fileID: 503817294634982555}
@@ -15455,6 +15227,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactions
       objectReference: {fileID: 0}
+    - target: {fileID: 771595456139324008, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 771595456170402862, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 985345962308965222, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15514,6 +15296,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: OVRHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686762312374576156, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686762312409590362, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815000727164848968, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815000728076889693, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5994490030486691046, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
         type: 3}
@@ -15610,6 +15412,21 @@ PrefabInstance:
       propertyPath: blockPieces.Array.data[5]
       value: 
       objectReference: {fileID: 104621950}
+    - target: {fileID: 6692997198652554125, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336578751889584711, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336578751921421313, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

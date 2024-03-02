@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using Oculus.Interaction;
 using Oculus.Interaction.HandGrab;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class BlockPieces : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class BlockPieces : MonoBehaviour
     private float pinchTime;
     [SerializeField]private float unsnapTime = 0.5f;
     
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
