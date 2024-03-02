@@ -9,6 +9,7 @@ public class SnapManager : MonoBehaviour
     public GameObject rewardVFX;
     public AudioClip rewardSfxClip;
     private AudioSource audioSource;
+    public GameObject winSignal;
 
     private void Start()
     {
@@ -51,6 +52,7 @@ public class SnapManager : MonoBehaviour
 
     void NextStage()
     {
+        winSignal.SetActive(true);
         //Do sth.!
     }
 }
