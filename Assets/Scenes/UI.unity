@@ -216,6 +216,108 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1757110342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &81551751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5815000727855484463, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1575691658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &81551756
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81551751}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3c1777d701eae5b4ab196d16a19280f1, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &91785910
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +620,7 @@ MonoBehaviour:
   - {fileID: 6628424084700341269}
   - {fileID: 1796874979707663681}
   rewardVFX: {fileID: 0}
-  rewardSfxClip: {fileID: 8300000, guid: 6acdf4f36d20f49a4b2e1f077dc3e4c1, type: 3}
+  rewardSfxClip: {fileID: 8300000, guid: dfc43e084fa8a444b83226fada17b944, type: 3}
   Part1Template: {fileID: 2495716029063622119}
   Part1targets: {fileID: 4754221759850134822}
   Part1Blocks: {fileID: 2224320860807784129}
@@ -5333,7 +5435,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5815000727855484463, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 81551756}
   m_SourcePrefab: {fileID: 100100000, guid: af82da0fc88bf40eb9ff0c6fe10c4fd3, type: 3}
 --- !u!20 &1575691663 stripped
 Camera:
@@ -6642,7 +6748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 754776158}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: 80be9a9891268ae4fbe4583edd735199, type: 3}
 --- !u!23 &1103342281794206237
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6748,6 +6854,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 227543253238424972, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
+    - target: {fileID: 227543253238424972, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1575691663}
@@ -6773,6 +6884,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1215294347836680892, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
+    - target: {fileID: 1215294347836680892, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1575691663}
@@ -6781,6 +6897,11 @@ PrefabInstance:
       propertyPath: correctTransform
       value: 
       objectReference: {fileID: 2925337343564507416}
+    - target: {fileID: 1242260112235875388, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
     - target: {fileID: 1242260112235875388, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
       propertyPath: mainCamera
@@ -6928,6 +7049,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3525837881564856658, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
+    - target: {fileID: 3525837881564856658, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1575691663}
@@ -6966,6 +7092,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 943.00006
       objectReference: {fileID: 0}
+    - target: {fileID: 5563892778273443805, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
     - target: {fileID: 5563892778273443805, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
       propertyPath: mainCamera
@@ -7013,6 +7144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7267158400238316487, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
+    - target: {fileID: 7267158400238316487, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1575691663}
@@ -7028,6 +7164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7374634608392135939, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
+    - target: {fileID: 7374634608392135939, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1575691663}
@@ -7036,6 +7177,11 @@ PrefabInstance:
       propertyPath: correctTransform
       value: 
       objectReference: {fileID: 4094861528079174563}
+    - target: {fileID: 7407929066344885357, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
     - target: {fileID: 7407929066344885357, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
       propertyPath: mainCamera
@@ -7051,6 +7197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: part3_4
       objectReference: {fileID: 0}
+    - target: {fileID: 7558997182551574516, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
     - target: {fileID: 7558997182551574516, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
       propertyPath: mainCamera
@@ -7306,7 +7457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 1382127624}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: 80be9a9891268ae4fbe4583edd735199, type: 3}
 --- !u!1 &1832656755735404374
 GameObject:
   m_ObjectHideFlags: 0
@@ -7474,7 +7625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 295493565}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: 80be9a9891268ae4fbe4583edd735199, type: 3}
 --- !u!4 &2107695297537824698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5757168677310807715, guid: f3f6cd7762e014f0e8aeeb337288478a,
@@ -7744,7 +7895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 1340329001}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: 80be9a9891268ae4fbe4583edd735199, type: 3}
 --- !u!33 &2622942265208281118
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9432,6 +9583,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389634887745032252, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
         type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
+    - target: {fileID: 3389634887745032252, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1575691663}
@@ -9462,6 +9618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4975626318400378528, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
         type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
+    - target: {fileID: 4975626318400378528, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1575691663}
@@ -9479,7 +9640,7 @@ PrefabInstance:
         type: 3}
       propertyPath: snapClick
       value: 
-      objectReference: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
     - target: {fileID: 6880908871502339593, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
         type: 3}
       propertyPath: mainCamera
@@ -9505,6 +9666,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -2107
       objectReference: {fileID: 0}
+    - target: {fileID: 8828942881218069073, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
+        type: 3}
+      propertyPath: snapClick
+      value: 
+      objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
     - target: {fileID: 8828942881218069073, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
         type: 3}
       propertyPath: mainCamera
@@ -9651,7 +9817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 1401352062}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &5272640647596361658
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9911,7 +10077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 2107695297537824698}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &5487833673412718429
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10100,7 +10266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 5579563797289706941}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &5665120743586771115
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10516,7 +10682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 4850386829723280361}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &5788479451479837768
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10763,7 +10929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 992930484}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6126713354805708845
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10953,7 +11119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 1252179819535968960}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6238424558388104721
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11102,7 +11268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 681923281192035167}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6349538426667457466
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11452,7 +11618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 402907261371696862}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6535822613852055252
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11638,7 +11804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 1352753961}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: 80be9a9891268ae4fbe4583edd735199, type: 3}
 --- !u!114 &6633601699052166167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11653,7 +11819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 9064055993189555955}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6633601699052166173
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11780,7 +11946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 561244717093035789}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6714522310040590490
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12152,7 +12318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 784359911951638652}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &7008848416192824196
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12303,7 +12469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 390533784}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &7073797163928846542
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12945,7 +13111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 4139561183178752524}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &7952656419156244349
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13095,7 +13261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 2032188449}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8065269163278189497
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13407,7 +13573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 2369300181292325924}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8181294380532065491
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13709,7 +13875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 4615112336277091299}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8491799017765599909
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14090,7 +14256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 4199268506581502487}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8571110776257029398
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14252,7 +14418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 841160185}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8680253285352525428
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14512,7 +14678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 2944677227494587931}
   mainCamera: {fileID: 1575691663}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8769953527113893630
 AudioSource:
   m_ObjectHideFlags: 0
