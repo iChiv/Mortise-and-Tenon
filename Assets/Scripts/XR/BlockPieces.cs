@@ -29,6 +29,7 @@ public class BlockPieces : MonoBehaviour
     private float pinchTime;
     // [SerializeField]private float unsnapTime = 0.5f;
     
+    private FlyToPlayer flyToPlayer;
 
     void Start()
     {

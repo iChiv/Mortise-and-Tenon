@@ -16,17 +16,27 @@ public class SnapManager : MonoBehaviour
     public AudioClip rewardSfxClip;
     private AudioSource audioSource;
     // public GameObject winSignal;
-    public GameObject template;
-    public GameObject targets;
-    public GameObject blocks;
-    public GameObject finished;
 
+    public GameObject Part1Template;
+    public GameObject Part1targets;
+    public GameObject Part1Blocks;
+    public GameObject Part1Finished;
+    
     public GameObject Part2Template;
     public GameObject Part2targets;
+    public GameObject Part2Blocks;
+    public GameObject Part2Finished;
+    
     public GameObject Part3Template;
     public GameObject Part3targets;
+    public GameObject Part3Blocks;
+    public GameObject Part3Finished;
+    
     public GameObject Part4Template;
     public GameObject Part4targets;
+    public GameObject Part4Blocks;
+    public GameObject Part4Finished;
+    
     public GameObject Shield_finshed;
 
     private FlyToPlayer flyToPlayer;
@@ -35,16 +45,18 @@ public class SnapManager : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if (stage == 1)
-        {
-            EnableAllGrab();
-        }
+        // if (stage == 1)
+        // {
+        //     EnableAllGrab();
+        // }
+        EnableAllGrab();
     }
 
     private void Update()
     {
         if (AreAllPiecesCorrectlyPositioned())
         {
+            RewardAndProceed();
             stage += 1;
             switch (stage)
             {
@@ -60,7 +72,6 @@ public class SnapManager : MonoBehaviour
                     EnableAllGrab();
                     break;
             }
-            RewardAndProceed();
         }
     }
 
@@ -131,20 +142,16 @@ public class SnapManager : MonoBehaviour
                 ShipFinished();
                 break;
             case 1:
-                Part1Finished();
-                PartFinished();
+                Part1Completed();
                 break;
             case 2:
-                PartFinished();
-                Part2Finished();
+                Part2Completed();
                 break;
             case 3:
-                PartFinished();
-                Part3Finished();
+                Part3Completed();
                 break;
             case 4:
-                PartFinished();
-                Part4Finished();
+                Part4Completed();
                 break;
             default:
                 Debug.Log("level not set");
@@ -152,44 +159,97 @@ public class SnapManager : MonoBehaviour
         }
     }
 
-    public void PartFinished()
+    public void Part1Completed()
     {
-        template.SetActive(false); // fade out nothing then disable
-        targets.SetActive(false); // fade out nothing then disable
-        blocks.SetActive(false); // fade out nothing then disable
-        finished.SetActive(true); // fade in
-    }
-
-    public void Part1Finished()
-    {
+        Part1targets.SetActive(false);
+        Part1Blocks.SetActive(false);
+        Part1Template.SetActive(false);
+        Part1Finished.SetActive(true);
         Part2Template.SetActive(true);
         Part2targets.SetActive(true);
+        foreach (var piece in blockPieces2)
+        {
+            piece.GetComponent<FlyToPlayer>().EnableGrab();
+        }
     }
     
-    public void Part2Finished()
+    public void Part2Completed()
     {
+        Part2targets.SetActive(false);
+        Part2Blocks.SetActive(false);
+        Part2Template.SetActive(false);
+        Part2Finished.SetActive(true);
         Part3Template.SetActive(true);
         Part3targets.SetActive(true);
+        foreach (var piece in blockPieces3)
+        {
+            piece.GetComponent<FlyToPlayer>().EnableGrab();
+        }
     }
     
-    public void Part3Finished()
+    public void Part3Completed()
     {
+        Part3targets.SetActive(false);
+        Part3Blocks.SetActive(false);
+        Part3Template.SetActive(false);
+        Part3Finished.SetActive(true);
         Part4Template.SetActive(true);
         Part4targets.SetActive(true);
+        foreach (var piece in blockPieces4)
+        {
+            piece.GetComponent<FlyToPlayer>().EnableGrab();
+        }
     }
     
-    public void Part4Finished()
+    public void Part4Completed()
     {
+        Part4targets.SetActive(false);
+        Part4Blocks.SetActive(false);
+        Part4Template.SetActive(false);
+        Part4Finished.SetActive(true);
         Shield_finshed.SetActive(true);
     }
 
     public void EnableAllGrab()
     {
-        foreach (var piece in blockPieces1)
+        switch (stage)
         {
-            flyToPlayer = piece.GetComponent<FlyToPlayer>();
-            flyToPlayer.EnableGrab();
+            case 1:
+                foreach (var piece in blockPieces1)
+                {
+                    flyToPlayer = piece.GetComponent<FlyToPlayer>();
+                    flyToPlayer.MoveToPlayer();
+                    flyToPlayer.EnableGrab();
+                }
+                break;
+            case 2:
+                foreach (var piece in blockPieces2)
+                {
+                    flyToPlayer = piece.GetComponent<FlyToPlayer>();
+                    flyToPlayer.MoveToPlayer();
+                    flyToPlayer.EnableGrab();
+                }
+                break;
+            case 3:
+                foreach (var piece in blockPieces3)
+                {
+                    flyToPlayer = piece.GetComponent<FlyToPlayer>();
+                    flyToPlayer.MoveToPlayer();
+                    flyToPlayer.EnableGrab();
+                }
+                break;
+            case 4:
+                foreach (var piece in blockPieces4)
+                {
+                    flyToPlayer = piece.GetComponent<FlyToPlayer>();
+                    flyToPlayer.MoveToPlayer();
+                    flyToPlayer.EnableGrab();
+                }
+                break;
+            case 5:
+                break;
         }
+        
     }
 
     public void ShipFinished()
