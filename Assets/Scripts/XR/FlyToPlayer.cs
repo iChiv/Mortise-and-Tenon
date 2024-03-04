@@ -30,7 +30,7 @@ public class FlyToPlayer : MonoBehaviour
         transform.DOKill();
         transform.DOMove(targetTransform.position, animationDuration).SetEase(Ease.InOutQuad);
         transform.DORotateQuaternion(targetTransform.rotation, animationDuration).SetEase(Ease.InOutQuad);
-        transform.DOScale(Vector3.one, animationDuration).SetEase(Ease.InOutQuad);
+        transform.DOScale(Vector3.one, animationDuration).SetEase(Ease.Linear);
         EnableGrab();
     }
 

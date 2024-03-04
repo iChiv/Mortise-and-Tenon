@@ -7,11 +7,12 @@ using UnityEngine.Serialization;
 public class SnapManager : MonoBehaviour
 {
     public int stage;
-    public BlockPieces[] blockPieces0;
+    
     public BlockPieces[] blockPieces1;
     public BlockPieces[] blockPieces2;
     public BlockPieces[] blockPieces3;
     public BlockPieces[] blockPieces4;
+    public BlockPieces[] blockPieces5;
     public GameObject rewardVFX;
     public AudioClip rewardSfxClip;
     private AudioSource audioSource;
@@ -39,6 +40,11 @@ public class SnapManager : MonoBehaviour
     
     public GameObject Shield_finshed;
 
+    public GameObject ShipTemplate;
+    public GameObject ShipTargets;
+    public GameObject ShipFinishedModuel;
+    
+
     private FlyToPlayer flyToPlayer;
     
 
@@ -58,20 +64,7 @@ public class SnapManager : MonoBehaviour
         {
             RewardAndProceed();
             stage += 1;
-            switch (stage)
-            {
-                default:
-                    break;
-                case 2:
-                    EnableAllGrab();
-                    break;
-                case 3:
-                    EnableAllGrab();
-                    break;
-                case 4:
-                    EnableAllGrab();
-                    break;
-            }
+            EnableAllGrab();
         }
     }
 
@@ -107,8 +100,8 @@ public class SnapManager : MonoBehaviour
                         return false;
                 }
                 break;
-            case 0:
-                foreach (var piece in blockPieces0)
+            case 5:
+                foreach (var piece in blockPieces5)
                 {
                     if (!piece.IsPositionedCorrectly)
                         return false;
@@ -138,7 +131,7 @@ public class SnapManager : MonoBehaviour
     {
         switch (stage)
         {
-            case 0:
+            case 5:
                 ShipFinished();
                 break;
             case 1:
@@ -208,6 +201,8 @@ public class SnapManager : MonoBehaviour
         Part4Template.SetActive(false);
         Part4Finished.SetActive(true);
         Shield_finshed.SetActive(true);
+        ShipTemplate.SetActive(true);
+        ShipTargets.SetActive(true);
     }
 
     public void EnableAllGrab()
@@ -254,6 +249,13 @@ public class SnapManager : MonoBehaviour
 
     public void ShipFinished()
     {
-        //Animation & SFX
+        ShipFinishedModuel.SetActive(true);
+        ShipTemplate.SetActive(false);
+        ShipTargets.SetActive(false);
+        Shield_finshed.SetActive(false);
+        Part1Finished.SetActive(false);
+        Part2Finished.SetActive(false);
+        Part3Finished.SetActive(false);
+        Part4Finished.SetActive(false);
     }
 }
