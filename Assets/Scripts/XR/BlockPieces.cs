@@ -27,7 +27,7 @@ public class BlockPieces : MonoBehaviour
     private AudioSource audioSource;
 
     private float pinchTime;
-    [SerializeField]private float unsnapTime = 0.5f;
+    // [SerializeField]private float unsnapTime = 0.5f;
     
 
     void Start()
