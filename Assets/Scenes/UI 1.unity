@@ -1203,6 +1203,79 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 5176756747771129663}
   _maxGrabPoints: 1
+--- !u!1001 &515061022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.3460045
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.2031
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.7500615
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -442709169282718714, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fede9241af907884e9befa7b95bf8b45, type: 2}
+    - target: {fileID: 919132149155446097, guid: e5c0cd36a3c02044ab4cab53a0b680a2,
+        type: 3}
+      propertyPath: m_Name
+      value: boat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e5c0cd36a3c02044ab4cab53a0b680a2, type: 3}
 --- !u!4 &517710303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1353934135071674456, guid: 338daefcff19ee641be13220893af498,
@@ -6818,8 +6891,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 297375190}
-  distanceHandGrab: {fileID: 802954842}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!33 &2594250314059747593 stripped
@@ -7206,8 +7277,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 1373922689}
-  distanceHandGrab: {fileID: 904152266}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!23 &4720554977778716956
@@ -7368,8 +7437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 804877220}
-  distanceHandGrab: {fileID: 1307390609}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!4 &5074654121613878226 stripped
@@ -7735,8 +7802,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 806253246}
-  distanceHandGrab: {fileID: 1909475814}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!4 &6535003003211020996
@@ -7849,8 +7914,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 1129295386}
-  distanceHandGrab: {fileID: 503684905}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!4 &6876723647617393956
@@ -8010,8 +8073,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 1781788664}
-  distanceHandGrab: {fileID: 733286237}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!1 &7811320864045445914
@@ -8121,8 +8182,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 1518800438}
-  distanceHandGrab: {fileID: 1518800438}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!4 &8343990890861660286 stripped
@@ -8379,8 +8438,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 639684546}
-  distanceHandGrab: {fileID: 1411018925}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!1 &8674648497431157096
@@ -8555,8 +8612,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 0}
   mainCamera: {fileID: 1575691663}
-  handGrab: {fileID: 754074914}
-  distanceHandGrab: {fileID: 1498103260}
   snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
   unsnapTime: 0.5
 --- !u!4 &9035615809833848866
@@ -8784,3 +8839,4 @@ SceneRoots:
   - {fileID: 2126522385}
   - {fileID: 1687468642}
   - {fileID: 942423287}
+  - {fileID: 515061022}
