@@ -18,9 +18,9 @@ public class BlockPieces : MonoBehaviour
 
     public Camera mainCamera;
 
-    public GameObject handGrab;
+    private GameObject handGrab;
 
-    public GameObject distanceHandGrab;
+    private GameObject distanceHandGrab;
 
     public AudioClip snapClick;
 
@@ -34,6 +34,9 @@ public class BlockPieces : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         outline = GetComponent<Outline>();
+        
+        handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; // 替换"HandGrabName"为实际的子物体名称
+        distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; // 替换"DistanceHandGrabName"为实际的子物体名称
     }
     
     void Update()
@@ -95,20 +98,20 @@ public class BlockPieces : MonoBehaviour
         distanceHandGrab.SetActive(true);
     }
 
-    public void StopDragging()
-    {
-        isBeingDragged = false;
-    }
+    // public void StopDragging()
+    // {
+    //     isBeingDragged = false;
+    // }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("OVRHand"))
-        {
-            outline.enabled = true;
-        }
-        else
-        {
-            outline.enabled = false;
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("OVRHand"))
+    //     {
+    //         outline.enabled = true;
+    //     }
+    //     else
+    //     {
+    //         outline.enabled = false;
+    //     }
+    // }
 }

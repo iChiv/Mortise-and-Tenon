@@ -1,28 +1,39 @@
+using System;
 using Oculus.Interaction;
+using Oculus.Interaction.HandGrab;
 using UnityEngine;
 
 namespace XR
 {
-    public class GrabbableWithEffect : OVRGrabbable
+    public class GrabbableWithEffect : MonoBehaviour
     {
+        public HandGrabInteractor[] handGrabInteractors;
         private Outline outline;
 
-        protected override void Start()
+        private void Awake()
         {
-            base.Start();
-            outline = GetComponent<Outline>();
+            handGrabInteractors = FindObjectsOfType<HandGrabInteractor>();
+            foreach (HandGrabInteractor interactor in handGrabInteractors)
+            {
+                
+            }
         }
 
-        public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
+        private void Update()
         {
-            base.GrabBegin(hand, grabPoint);
-            outline.enabled = true;
-        }
-
-        public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
-        {
-            base.GrabEnd(linearVelocity, angularVelocity);
-            outline.enabled = false;
+            foreach (HandGrabInteractor interactor in handGrabInteractors)
+            {
+                if (interactor.TargetInteractable != null)
+                {
+                    MonoBehaviour interactableBehaviour = interactor.TargetInteractable as MonoBehaviour;
+                    // GameObject grabbedObject = interactor.TargetInteractable.;
+                    if (interactableBehaviour != null)
+                    {
+                        GameObject grabbedObject = interactableBehaviour.gameObject;
+                        outline = grabbedObject.GetComponent<Outline>();
+                    }
+                }
+            }
         }
     }
 }

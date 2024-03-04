@@ -6,7 +6,7 @@ public class SummonBlocks : MonoBehaviour
 {
     [SerializeField] private float waveThreshold = 1.5f;
 
-    [SerializeField] private float forceMultiplier = 2f;
+    // [SerializeField] private float forceMultiplier = 2f;
 
     [SerializeField] private float cooldown = 0.5f;
 

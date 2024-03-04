@@ -11,6 +11,10 @@ public class SnapManager : MonoBehaviour
     public AudioClip rewardSfxClip;
     private AudioSource audioSource;
     public GameObject winSignal;
+    public GameObject template;
+    public GameObject targets;
+    public GameObject blocks;
+    public GameObject finished;
 
     private void Start()
     {
@@ -55,17 +59,61 @@ public class SnapManager : MonoBehaviour
     {
         switch (stage)
         {
+            case 0:
+                ShipFinished();
+                break;
             case 1:
-                winSignal.SetActive(true);
+                Part1Finished();
+                PartFinished();
                 break;
             case 2:
-                winSignal.SetActive(true);
+                PartFinished();
+                Part2Finished();
                 break;
             case 3:
-                winSignal.SetActive(true);
+                PartFinished();
+                Part3Finished();
+                break;
+            case 4:
+                PartFinished();
+                Part4Finished();
+                break;
+            default:
+                Debug.Log("level not set");
                 break;
         }
+    }
+
+    public void PartFinished()
+    {
+        template.SetActive(false);
+        targets.SetActive(false);
+        blocks.SetActive(true);
+        finished.SetActive(true);
+    }
+
+    public void Part1Finished()
+    {
         
-        //Do sth.!
+    }
+    
+    public void Part2Finished()
+    {
+        
+    }
+    
+    public void Part3Finished()
+    {
+        
+    }
+    
+    public void Part4Finished()
+    {
+        
+    }
+
+    public void ShipFinished()
+    {
+        
     }
 }
