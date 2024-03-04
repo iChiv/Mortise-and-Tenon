@@ -39,7 +39,7 @@ public class SnapManager : MonoBehaviour
     {
         foreach (var piece in blockPieces)
         {
-            if (!piece.isPositionedCorrectly)
+            if (!piece.IsPositionedCorrectly)
                 return false;
         }
 
@@ -92,10 +92,10 @@ public class SnapManager : MonoBehaviour
 
     public void PartFinished()
     {
-        template.SetActive(false);
-        targets.SetActive(false);
-        blocks.SetActive(true);
-        finished.SetActive(true);
+        template.SetActive(false); // fade out nothing then disable
+        targets.SetActive(false); // fade out nothing then disable
+        blocks.SetActive(false); // fade out nothing then disable
+        finished.SetActive(true); // fade in
     }
 
     public void Part1Finished()

@@ -12,7 +12,7 @@ public class BlockPieces : MonoBehaviour
     public Transform correctTransform;
     private Outline outline;
 
-    public bool isPositionedCorrectly { get; private set; } = false;
+    public bool IsPositionedCorrectly { get; private set; } = false;
 
     private bool isBeingDragged = false;
 
@@ -46,7 +46,7 @@ public class BlockPieces : MonoBehaviour
             return;
         }
 
-        if (!isPositionedCorrectly)
+        if (!IsPositionedCorrectly)
         {
             float distance = Vector3.Distance(transform.position, correctTransform.position);
             float angle = Quaternion.Angle(transform.rotation, correctTransform.rotation);
@@ -58,6 +58,7 @@ public class BlockPieces : MonoBehaviour
         }
         else
         {
+            /*
             bool isPinching = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.5f;
             
             if (isPinching)
@@ -73,6 +74,7 @@ public class BlockPieces : MonoBehaviour
                     }
                 }
             }
+            */
         }
     }
 
@@ -80,7 +82,7 @@ public class BlockPieces : MonoBehaviour
     {
         transform.position = correctTransform.position;
         transform.rotation = correctTransform.rotation;
-        isPositionedCorrectly = true;
+        IsPositionedCorrectly = true;
         handGrab.SetActive(false);
         distanceHandGrab.SetActive(false);
         
@@ -93,7 +95,7 @@ public class BlockPieces : MonoBehaviour
     void StartDragging()
     {
         isBeingDragged = true;
-        isPositionedCorrectly = false;
+        IsPositionedCorrectly = false;
         handGrab.SetActive(true);
         distanceHandGrab.SetActive(true);
     }
