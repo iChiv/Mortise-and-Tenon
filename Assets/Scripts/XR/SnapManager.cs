@@ -187,6 +187,7 @@ public class SnapManager : MonoBehaviour
     {
         foreach (var piece in blockPieces1)
         {
+            flyToPlayer = piece.GetComponent<FlyToPlayer>();
             flyToPlayer.EnableGrab();
         }
     }

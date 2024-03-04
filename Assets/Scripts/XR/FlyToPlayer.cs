@@ -12,23 +12,23 @@ public class FlyToPlayer : MonoBehaviour
     public float floatingRadius = 0.5f; // 飘浮动画中木块移动的半径
     public float floatingDuration = 2f; // 飘浮动画的持续时间
     
-    private GameObject handGrab;
-    private GameObject distanceHandGrab;
+    public GameObject handGrab;
+    public GameObject distanceHandGrab;
 
     void Start()
     {
         // 假设木块初始时是十倍大小并且可能有不同的旋转
-        transform.localScale = Vector3.one * 3;
-        handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; // 替换"HandGrabName"为实际的子物体名称
-        distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; // 替换"DistanceHandGrabName"为实际的子物体名称
+        // transform.localScale = Vector3.one * 3;
+        handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; 
+        distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; 
         DisableGrab();
     }
 
     public void MoveToPlayer()
     {
-        transform.DOMove(targetTransform.position, animationDuration).SetEase(Ease.InOutQuad);
-        transform.DORotateQuaternion(targetTransform.rotation, animationDuration).SetEase(Ease.InOutQuad);
-        transform.DOScale(Vector3.one, animationDuration).SetEase(Ease.InOutQuad);
+        // transform.DOMove(targetTransform.position, animationDuration).SetEase(Ease.InOutQuad);
+        // transform.DORotateQuaternion(targetTransform.rotation, animationDuration).SetEase(Ease.InOutQuad);
+        // transform.DOScale(Vector3.one, animationDuration).SetEase(Ease.InOutQuad);
         EnableGrab();
     }
 
