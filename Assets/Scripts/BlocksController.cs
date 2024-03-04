@@ -54,4 +54,6 @@ public class BlocksController : MonoBehaviour
             blockStates[block] = enable;
         }
     }
+
+
 }
