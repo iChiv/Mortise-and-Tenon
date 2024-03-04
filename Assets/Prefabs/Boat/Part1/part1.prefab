@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8671503227838345446}
   - component: {fileID: 8677421310915207622}
   - component: {fileID: 5901249594779835367}
-  - component: {fileID: 1772042099034702691}
   - component: {fileID: 8828942881218069073}
+  - component: {fileID: 8549221948411353192}
   m_Layer: 0
   m_Name: polySurface1041
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 14464903006242961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 337.87958, y: 640.3516, z: 233.59413}
+  m_LocalPosition: {x: 337.87958, y: 820, z: 233.59413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -115,8 +115,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &1772042099034702691
-SphereCollider:
+--- !u!114 &8828942881218069073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14464903006242961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctTransform: {fileID: 0}
+  mainCamera: {fileID: 0}
+  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  unsnapTime: 0.5
+--- !u!64 &8549221948411353192
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -133,27 +149,10 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 144.51364
-  m_Center: {x: 0.00010108947, y: -0.00026130676, z: -0.000030517578}
---- !u!114 &8828942881218069073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14464903006242961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctTransform: {fileID: 0}
-  mainCamera: {fileID: 0}
-  handGrab: {fileID: 8499354828947495081}
-  distanceHandGrab: {fileID: 5943053916332624795}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
-  unsnapTime: 0.5
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8860695371371543967, guid: e5c0cd36a3c02044ab4cab53a0b680a2, type: 3}
 --- !u!1 &2189038347169505328
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,8 +365,8 @@ GameObject:
   - component: {fileID: 1973078754611788829}
   - component: {fileID: 2970064394417834231}
   - component: {fileID: 3494248343133942748}
-  - component: {fileID: 5048809296217889099}
   - component: {fileID: 6880908871502339593}
+  - component: {fileID: 685049688598817133}
   m_Layer: 0
   m_Name: polySurface1039
   m_TagString: Untagged
@@ -384,7 +383,7 @@ Transform:
   m_GameObject: {fileID: 3031695713234255611}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500.13327, y: 640.3516, z: 233.59413}
+  m_LocalPosition: {x: 500.13327, y: 799, z: 233.59413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -469,8 +468,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &5048809296217889099
-SphereCollider:
+--- !u!114 &6880908871502339593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031695713234255611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctTransform: {fileID: 0}
+  mainCamera: {fileID: 0}
+  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  unsnapTime: 0.5
+--- !u!64 &685049688598817133
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -487,27 +502,10 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 133.04886
-  m_Center: {x: 0.00002193451, y: -0.000017166138, z: 0.0000076293945}
---- !u!114 &6880908871502339593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3031695713234255611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctTransform: {fileID: 0}
-  mainCamera: {fileID: 0}
-  handGrab: {fileID: 4044306103284715319}
-  distanceHandGrab: {fileID: 3412251349543229841}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
-  unsnapTime: 0.5
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4872966077515131385, guid: e5c0cd36a3c02044ab4cab53a0b680a2, type: 3}
 --- !u!1 &3166113102810772693
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3166113102810772693}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.7411842, y: 1.81969, z: 0.156}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
@@ -755,8 +753,8 @@ GameObject:
   - component: {fileID: 3830082579189223727}
   - component: {fileID: 4853965117255284807}
   - component: {fileID: 753964793887052724}
-  - component: {fileID: 7408338839828367666}
   - component: {fileID: 4975626318400378528}
+  - component: {fileID: 7846710004637406867}
   m_Layer: 0
   m_Name: polySurface1040
   m_TagString: Untagged
@@ -773,7 +771,7 @@ Transform:
   m_GameObject: {fileID: 3566001216757536485}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 337.69482, y: 603.80884, z: 233.59413}
+  m_LocalPosition: {x: 337.69482, y: 721, z: 233.59413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -858,8 +856,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7408338839828367666
-SphereCollider:
+--- !u!114 &4975626318400378528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3566001216757536485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctTransform: {fileID: 0}
+  mainCamera: {fileID: 0}
+  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  unsnapTime: 0.5
+--- !u!64 &7846710004637406867
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -876,27 +890,10 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 100.68084
-  m_Center: {x: 0.000093460076, y: 0, z: -0.000034332275}
---- !u!114 &4975626318400378528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3566001216757536485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctTransform: {fileID: 0}
-  mainCamera: {fileID: 0}
-  handGrab: {fileID: 5811160786092694093}
-  distanceHandGrab: {fileID: 6703595852394308424}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
-  unsnapTime: 0.5
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8043642034060141110, guid: e5c0cd36a3c02044ab4cab53a0b680a2, type: 3}
 --- !u!1 &4044306103284715319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,8 +1372,8 @@ GameObject:
   - component: {fileID: 5785022103951095490}
   - component: {fileID: 8677936366063400546}
   - component: {fileID: 2795743492758680665}
-  - component: {fileID: 7012983621024493852}
   - component: {fileID: 3389634887745032252}
+  - component: {fileID: 4161456453518565693}
   m_Layer: 0
   m_Name: polySurface1042
   m_TagString: Untagged
@@ -1393,7 +1390,7 @@ Transform:
   m_GameObject: {fileID: 5953860115610489047}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 499.94855, y: 604.5925, z: 233.59413}
+  m_LocalPosition: {x: 499.94855, y: 697, z: 233.59413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1478,8 +1475,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7012983621024493852
-SphereCollider:
+--- !u!114 &3389634887745032252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953860115610489047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctTransform: {fileID: 0}
+  mainCamera: {fileID: 0}
+  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
+  unsnapTime: 0.5
+--- !u!64 &4161456453518565693
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1496,27 +1509,10 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 93.80388
-  m_Center: {x: 0.0000028610227, y: 0.0000133514395, z: -0.000030517578}
---- !u!114 &3389634887745032252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5953860115610489047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9172dff43530c4acd86524bdd84aa204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctTransform: {fileID: 0}
-  mainCamera: {fileID: 0}
-  handGrab: {fileID: 6017198929921109302}
-  distanceHandGrab: {fileID: 2189038347169505328}
-  snapClick: {fileID: 8300000, guid: 2cf9b08d47e97426e87357d18357b3af, type: 3}
-  unsnapTime: 0.5
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3226468957656241554, guid: e5c0cd36a3c02044ab4cab53a0b680a2, type: 3}
 --- !u!1 &6017198929921109302
 GameObject:
   m_ObjectHideFlags: 0

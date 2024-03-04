@@ -10,11 +10,17 @@ public class SnapManager : MonoBehaviour
     public GameObject rewardVFX;
     public AudioClip rewardSfxClip;
     private AudioSource audioSource;
-    public GameObject winSignal;
+    // public GameObject winSignal;
     public GameObject template;
     public GameObject targets;
     public GameObject blocks;
     public GameObject finished;
+
+    public GameObject Part2All;
+    public GameObject Part3All;
+    public GameObject Part4All;
+    public GameObject Shield_finshed;
+    
 
     private void Start()
     {
@@ -94,26 +100,26 @@ public class SnapManager : MonoBehaviour
 
     public void Part1Finished()
     {
-        
+        Part2All.SetActive(true);
     }
     
     public void Part2Finished()
     {
-        
+        Part3All.SetActive(true);
     }
     
     public void Part3Finished()
     {
-        
+        Part4All.SetActive(true);
     }
     
     public void Part4Finished()
     {
-        
+        Shield_finshed.SetActive(true);
     }
 
     public void ShipFinished()
     {
-        
+        //Animation & SFX
     }
 }
