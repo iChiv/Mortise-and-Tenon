@@ -17,8 +17,6 @@ public class FlyToPlayer : MonoBehaviour
 
     void Awake()
     {
-        // 假设木块初始时是十倍大小并且可能有不同的旋转
-        // transform.localScale = Vector3.one * 3;
         handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; 
         distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; 
         DisableGrab();
@@ -47,7 +45,6 @@ public class FlyToPlayer : MonoBehaviour
         DOVirtual.DelayedCall(1f, () => {
             transform.DOKill();
         });
-        // MoveToPlayer();
     }
     
     void StartFloatingAnimation(GameObject block)

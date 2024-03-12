@@ -7,32 +7,30 @@ namespace XR
 {
     public class GrabbableWithEffect : MonoBehaviour
     {
-        public HandGrabInteractor[] handGrabInteractors;
+        public InteractorActiveState InteractorActiveState;
+        public InteractorActiveState InteractorActiveState2;
         private Outline outline;
 
         private void Awake()
         {
-            handGrabInteractors = FindObjectsOfType<HandGrabInteractor>();
-            foreach (HandGrabInteractor interactor in handGrabInteractors)
-            {
-                
-            }
+            outline = GetComponent<Outline>();
+            
+        }
+
+        private void Start()
+        {
+            outline.enabled = false;
         }
 
         private void Update()
         {
-            foreach (HandGrabInteractor interactor in handGrabInteractors)
+            if (InteractorActiveState.Active || InteractorActiveState2.Active)
             {
-                if (interactor.TargetInteractable != null)
-                {
-                    MonoBehaviour interactableBehaviour = interactor.TargetInteractable as MonoBehaviour;
-                    // GameObject grabbedObject = interactor.TargetInteractable.;
-                    if (interactableBehaviour != null)
-                    {
-                        GameObject grabbedObject = interactableBehaviour.gameObject;
-                        outline = grabbedObject.GetComponent<Outline>();
-                    }
-                }
+                outline.enabled = true;
+            }
+            else
+            {
+                outline.enabled = false;
             }
         }
     }

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LUBAN_original.unity
     guid: 6f279e30fae0141b79a0f6612cb45f3e
   - enabled: 0
-    path: Assets/Scenes/Gamescene.unity
+    path: Assets/Scenes/Start.unity
     guid: b79a99d6dd97c4cf694388d8b8415baf
   - enabled: 0
     path: Assets/Scenes/LuBan_Mess.unity
