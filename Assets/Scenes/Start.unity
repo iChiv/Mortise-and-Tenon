@@ -974,6 +974,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1545191806}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b87d5cd3122884341abcbfe1678cf55f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545191808}
   m_SourcePrefab: {fileID: 100100000, guid: b87d5cd3122884341abcbfe1678cf55f, type: 3}
 --- !u!1 &1473096446
 GameObject:
@@ -1370,7 +1374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactor: {fileID: 2003572094}
-  _property: 4
+  _property: 8
 --- !u!135 &1545191804
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1447,6 +1451,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactor: {fileID: 1491760485}
   _property: 4
+--- !u!114 &1545191808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545191798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194b7d1054b8fa64b9bdcea46d06c3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeState: {fileID: 885271574}
+  _includeChildrenAsDependents: 0
+  _gameObjects: []
+  _monoBehaviours: []
 --- !u!1001 &1575691658
 PrefabInstance:
   m_ObjectHideFlags: 0
