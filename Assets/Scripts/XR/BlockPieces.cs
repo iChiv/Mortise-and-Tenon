@@ -52,7 +52,7 @@ public class BlockPieces : MonoBehaviour
             float distance = Vector3.Distance(transform.position, correctTransform.position);
             float angle = Quaternion.Angle(transform.rotation, correctTransform.rotation);
 
-            if (distance < 0.3f && angle < 90f)
+            if (distance < 0.2f && angle < 90f)
             {
                 SnapIntoPlace();
             }
