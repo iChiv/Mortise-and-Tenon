@@ -47,7 +47,7 @@ Material:
     - _depth: 0
     - _lerp: 0
     - _normal_strength: 0.15
-    - _reclection_reflection: 0
+    - _reclection_reflection: 0.1
     - _reflaction: 0
     - _reflection: 0
     - _smoothness: 1
