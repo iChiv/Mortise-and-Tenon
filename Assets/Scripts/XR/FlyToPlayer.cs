@@ -25,10 +25,10 @@ public class FlyToPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MoveToPlayer();
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     MoveToPlayer();
+        // }
     }
 
     public void MoveToPlayer()

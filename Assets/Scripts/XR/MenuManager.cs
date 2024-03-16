@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Oculus.Platform;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject menu;
+    
+    
+    
+    
 
     // private bool isMenuOpen = false;
 
@@ -38,5 +43,25 @@ public class MenuManager : MonoBehaviour
         // {
         //     menu.SetActive(false);
         // }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void TutorialButton()
+    {
+        //Gif
+    }
+
+    public void RestartButton()
+    {
+        //Display yes or no
+    }
+
+    public void AboutUs()
+    {
+        //Show info
     }
 }
