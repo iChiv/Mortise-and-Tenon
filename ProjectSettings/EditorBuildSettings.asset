@@ -23,9 +23,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/water.unity
     guid: a3941bc5e3edbcd4b9fd0e602c305594
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameTTrebuild.unity
     guid: 1a68d2a719afa4937bdc89a2725e2a44
+  - enabled: 1
+    path: Assets/Scenes/GameMainMenuTT.unity
+    guid: db3833bb46a5043499f6af19070b11d8
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e3eacc099f039486cbf0a77e4aedfb19,
       type: 2}
