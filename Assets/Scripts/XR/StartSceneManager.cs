@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,11 +13,14 @@ public class StartSceneManager : MonoBehaviour
 
     public AudioClip SFX;
 
+    public CanvasGroup titleCanvasGroup;
+
     private AudioSource audioSource;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        titleCanvasGroup.alpha = 0;
     }
 
     // Update is called once per frame
@@ -27,7 +31,9 @@ public class StartSceneManager : MonoBehaviour
             //All FX need to be less than invoke delay
             audioSource.PlayOneShot(SFX);
             Instantiate(VFX, transform.position, Quaternion.identity);
-            Invoke(nameof(LoadMainScene),2f);
+            titleCanvasGroup.DOFade(1, 2f).OnComplete(() => { // 使用DOTween使标题渐显
+                Invoke(nameof(LoadMainScene), 2f); // 渐显完成后等待2秒加载主游戏场景
+            });
         }
     }
 
