@@ -21,6 +21,7 @@ public class MenuManager : MonoBehaviour
     
     void Update()
     {
+        //播放开扇子动画
         if (Input.GetKeyDown(KeyCode.Space))
         {
             fanAnimator.SetBool("FanOpen", true);
@@ -31,7 +32,7 @@ public class MenuManager : MonoBehaviour
             menu.SetActive(!menu.activeSelf);
             if (menu.activeSelf)
             {
-                //播放开扇子动画
+                
                 ShowTutorial();
                 fanAnimator.SetBool("FanOpen", true);
 
