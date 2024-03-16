@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -43,6 +44,11 @@ public class SnapManager : MonoBehaviour
     public FadeObject ShipTemplate;
     public FadeObject ShipTargets;
     public FadeObject ShipFinishedModuel;
+
+    public CanvasGroup Part1text;
+    public CanvasGroup Part2text;
+    public CanvasGroup Part3text;
+    public CanvasGroup Part4text;
     
 
     private FlyToPlayer flyToPlayer;
@@ -131,9 +137,6 @@ public class SnapManager : MonoBehaviour
     {
         switch (stage)
         {
-            case 5:
-                ShipFinished();
-                break;
             case 1:
                 Part1Completed();
                 break;
@@ -145,6 +148,9 @@ public class SnapManager : MonoBehaviour
                 break;
             case 4:
                 Part4Completed();
+                break;
+            case 5:
+                ShipFinished();
                 break;
             default:
                 Debug.Log("level not set");
@@ -164,6 +170,8 @@ public class SnapManager : MonoBehaviour
         {
             piece.GetComponent<FlyToPlayer>().EnableGrab();
         }
+
+        Part1text.DOFade(1, 2f);
     }
     
     public void Part2Completed()
@@ -178,6 +186,7 @@ public class SnapManager : MonoBehaviour
         {
             piece.GetComponent<FlyToPlayer>().EnableGrab();
         }
+        Part2text.DOFade(1, 2f);
     }
     
     public void Part3Completed()
@@ -192,6 +201,7 @@ public class SnapManager : MonoBehaviour
         {
             piece.GetComponent<FlyToPlayer>().EnableGrab();
         }
+        Part3text.DOFade(1, 2f);
     }
     
     public void Part4Completed()
@@ -203,6 +213,7 @@ public class SnapManager : MonoBehaviour
         Shield_finshed.EnableAndFadeIn();
         ShipTemplate.EnableAndFadeIn();
         ShipTargets.EnableAndFadeIn();
+        Part4text.DOFade(1, 2f);
     }
 
     public void EnableAllGrab()
@@ -242,6 +253,14 @@ public class SnapManager : MonoBehaviour
                 }
                 break;
             case 5:
+                foreach (var piece in blockPieces4)
+                {
+                    var handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; 
+                    var distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; 
+                    handGrab.SetActive(true);
+                    distanceHandGrab.SetActive(true);
+                }
+
                 break;
         }
         
@@ -257,5 +276,42 @@ public class SnapManager : MonoBehaviour
         Part2Finished.FadeOutAndDisable();
         Part3Finished.FadeOutAndDisable();
         Part4Finished.FadeOutAndDisable();
+
+        Part1text.DOFade(0, 1f).OnComplete(() =>
+        {
+            // 动画完成后延迟一段时间执行操作
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                // 在这里禁用游戏物体
+                Part1text.gameObject.SetActive(false);
+            });
+        });
+        Part2text.DOFade(0, 1f).OnComplete(() =>
+        {
+            // 动画完成后延迟一段时间执行操作
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                // 在这里禁用游戏物体
+                Part2text.gameObject.SetActive(false);
+            });
+        });
+        Part3text.DOFade(0, 1f).OnComplete(() =>
+        {
+            // 动画完成后延迟一段时间执行操作
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                // 在这里禁用游戏物体
+                Part3text.gameObject.SetActive(false);
+            });
+        });
+        Part4text.DOFade(0, 1f).OnComplete(() =>
+        {
+            // 动画完成后延迟一段时间执行操作
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                // 在这里禁用游戏物体
+                Part4text.gameObject.SetActive(false);
+            });
+        });
     }
 }
