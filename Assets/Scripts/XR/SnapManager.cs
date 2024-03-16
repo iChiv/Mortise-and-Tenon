@@ -18,31 +18,31 @@ public class SnapManager : MonoBehaviour
     private AudioSource audioSource;
     // public GameObject winSignal;
 
-    public GameObject Part1Template;
-    public GameObject Part1targets;
-    public GameObject Part1Blocks;
-    public GameObject Part1Finished;
+    public FadeObject Part1Template;
+    public FadeObject Part1targets;
+    public FadeObject Part1Blocks;
+    public FadeObject Part1Finished;
     
-    public GameObject Part2Template;
-    public GameObject Part2targets;
-    public GameObject Part2Blocks;
-    public GameObject Part2Finished;
+    public FadeObject Part2Template;
+    public FadeObject Part2targets;
+    public FadeObject Part2Blocks;
+    public FadeObject Part2Finished;
     
-    public GameObject Part3Template;
-    public GameObject Part3targets;
-    public GameObject Part3Blocks;
-    public GameObject Part3Finished;
+    public FadeObject Part3Template;
+    public FadeObject Part3targets;
+    public FadeObject Part3Blocks;
+    public FadeObject Part3Finished;
     
-    public GameObject Part4Template;
-    public GameObject Part4targets;
-    public GameObject Part4Blocks;
-    public GameObject Part4Finished;
+    public FadeObject Part4Template;
+    public FadeObject Part4targets;
+    public FadeObject Part4Blocks;
+    public FadeObject Part4Finished;
     
-    public GameObject Shield_finshed;
+    public FadeObject Shield_finshed;
 
-    public GameObject ShipTemplate;
-    public GameObject ShipTargets;
-    public GameObject ShipFinishedModuel;
+    public FadeObject ShipTemplate;
+    public FadeObject ShipTargets;
+    public FadeObject ShipFinishedModuel;
     
 
     private FlyToPlayer flyToPlayer;
@@ -154,12 +154,12 @@ public class SnapManager : MonoBehaviour
 
     public void Part1Completed()
     {
-        Part1targets.SetActive(false);
-        Part1Blocks.SetActive(false);
-        Part1Template.SetActive(false);
-        Part1Finished.SetActive(true);
-        Part2Template.SetActive(true);
-        Part2targets.SetActive(true);
+        Part1targets.FadeOutAndDisable();
+        Part1Blocks.FadeOutAndDisable();
+        Part1Template.FadeOutAndDisable();
+        Part1Finished.EnableAndFadeIn();
+        Part2Template.EnableAndFadeIn();
+        Part2targets.EnableAndFadeIn();
         foreach (var piece in blockPieces2)
         {
             piece.GetComponent<FlyToPlayer>().EnableGrab();
@@ -168,12 +168,12 @@ public class SnapManager : MonoBehaviour
     
     public void Part2Completed()
     {
-        Part2targets.SetActive(false);
-        Part2Blocks.SetActive(false);
-        Part2Template.SetActive(false);
-        Part2Finished.SetActive(true);
-        Part3Template.SetActive(true);
-        Part3targets.SetActive(true);
+        Part2targets.FadeOutAndDisable();
+        Part2Blocks.FadeOutAndDisable();
+        Part2Template.FadeOutAndDisable();
+        Part2Finished.EnableAndFadeIn();
+        Part3Template.EnableAndFadeIn();
+        Part3targets.EnableAndFadeIn();
         foreach (var piece in blockPieces3)
         {
             piece.GetComponent<FlyToPlayer>().EnableGrab();
@@ -182,12 +182,12 @@ public class SnapManager : MonoBehaviour
     
     public void Part3Completed()
     {
-        Part3targets.SetActive(false);
-        Part3Blocks.SetActive(false);
-        Part3Template.SetActive(false);
-        Part3Finished.SetActive(true);
-        Part4Template.SetActive(true);
-        Part4targets.SetActive(true);
+        Part3targets.FadeOutAndDisable();
+        Part3Blocks.FadeOutAndDisable();
+        Part3Template.FadeOutAndDisable();
+        Part3Finished.EnableAndFadeIn();
+        Part4Template.EnableAndFadeIn();
+        Part4targets.EnableAndFadeIn();
         foreach (var piece in blockPieces4)
         {
             piece.GetComponent<FlyToPlayer>().EnableGrab();
@@ -196,13 +196,13 @@ public class SnapManager : MonoBehaviour
     
     public void Part4Completed()
     {
-        Part4targets.SetActive(false);
-        Part4Blocks.SetActive(false);
-        Part4Template.SetActive(false);
-        Part4Finished.SetActive(true);
-        Shield_finshed.SetActive(true);
-        ShipTemplate.SetActive(true);
-        ShipTargets.SetActive(true);
+        Part4targets.FadeOutAndDisable();
+        Part4Blocks.FadeOutAndDisable();
+        Part4Template.FadeOutAndDisable();
+        Part4Finished.EnableAndFadeIn();
+        Shield_finshed.EnableAndFadeIn();
+        ShipTemplate.EnableAndFadeIn();
+        ShipTargets.EnableAndFadeIn();
     }
 
     public void EnableAllGrab()
@@ -249,13 +249,13 @@ public class SnapManager : MonoBehaviour
 
     public void ShipFinished()
     {
-        ShipFinishedModuel.SetActive(true);
-        ShipTemplate.SetActive(false);
-        ShipTargets.SetActive(false);
-        Shield_finshed.SetActive(false);
-        Part1Finished.SetActive(false);
-        Part2Finished.SetActive(false);
-        Part3Finished.SetActive(false);
-        Part4Finished.SetActive(false);
+        ShipFinishedModuel.EnableAndFadeIn();
+        ShipTemplate.FadeOutAndDisable();
+        ShipTargets.FadeOutAndDisable();
+        Shield_finshed.FadeOutAndDisable();
+        Part1Finished.FadeOutAndDisable();
+        Part2Finished.FadeOutAndDisable();
+        Part3Finished.FadeOutAndDisable();
+        Part4Finished.FadeOutAndDisable();
     }
 }
