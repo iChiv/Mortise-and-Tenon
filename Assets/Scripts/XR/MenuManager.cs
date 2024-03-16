@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject restartDialog;
     [SerializeField] private GameObject restartYesButton;
     [SerializeField] private GameObject restartNoButton;
+    public Animator fanAnimator;
 
     void Start()
     {
@@ -20,12 +21,20 @@ public class MenuManager : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            fanAnimator.SetBool("FanOpen", true);
+        }
+
         if (OVRInput.GetDown(OVRInput.Button.Start))
         {
             menu.SetActive(!menu.activeSelf);
             if (menu.activeSelf)
             {
-                ShowTutorial(); 
+                //播放开扇子动画
+                ShowTutorial();
+                fanAnimator.SetBool("FanOpen", true);
+
             }
         }
     }
