@@ -277,6 +277,13 @@ public class SnapManager : MonoBehaviour
         Part3Finished.FadeOutAndDisable();
         Part4Finished.FadeOutAndDisable();
 
+        FadeAllText();
+        var aftership = GetComponent<AfterShip>();
+        aftership.AfterShipFinished();
+    }
+
+    private void FadeAllText()
+    {
         Part1text.DOFade(0, 1f).OnComplete(() =>
         {
             // 动画完成后延迟一段时间执行操作

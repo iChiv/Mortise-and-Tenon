@@ -44,7 +44,6 @@ public class StartSceneManager : MonoBehaviour
             if (!block.IsPositionedCorrectly)
                 return false;
         }
-
         return true;
     }
 
