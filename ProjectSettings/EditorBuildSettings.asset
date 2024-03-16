@@ -12,14 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/LUBAN_original.unity
     guid: 6f279e30fae0141b79a0f6612cb45f3e
   - enabled: 0
-    path: Assets/Scenes/Gamescene.unity
+    path: Assets/Scenes/Start.unity
     guid: b79a99d6dd97c4cf694388d8b8415baf
   - enabled: 0
     path: Assets/Scenes/LuBan_Mess.unity
     guid: 7f79aee2ecfdd4a8db1220fd450a9830
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 23dc9b31a12f4e840ac4621daf4fdf82
+  - enabled: 0
+    path: Assets/Scenes/water.unity
+    guid: a3941bc5e3edbcd4b9fd0e602c305594
+  - enabled: 1
+    path: Assets/Scenes/GameTTrebuild.unity
+    guid: 1a68d2a719afa4937bdc89a2725e2a44
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e3eacc099f039486cbf0a77e4aedfb19,
       type: 2}
