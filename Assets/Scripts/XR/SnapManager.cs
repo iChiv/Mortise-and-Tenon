@@ -214,6 +214,13 @@ public class SnapManager : MonoBehaviour
         ShipTemplate.EnableAndFadeIn();
         ShipTargets.EnableAndFadeIn();
         Part4text.DOFade(1, 2f);
+        foreach (var piece in blockPieces5)
+        {
+            var handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; 
+            var distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; 
+            handGrab.SetActive(true);
+            distanceHandGrab.SetActive(true);
+        }
     }
 
     public void EnableAllGrab()
@@ -253,7 +260,7 @@ public class SnapManager : MonoBehaviour
                 }
                 break;
             case 5:
-                foreach (var piece in blockPieces4)
+                foreach (var piece in blockPieces5)
                 {
                     var handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; 
                     var distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; 

@@ -13,14 +13,14 @@ public class StartSceneManager : MonoBehaviour
 
     public AudioClip SFX;
 
-    public CanvasGroup titleCanvasGroup;
+    public SpriteRenderer titleSpriteRenderer;
 
     private AudioSource audioSource;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        titleCanvasGroup.alpha = 0;
+        SetTitleAlpha(0);
     }
 
     // Update is called once per frame
@@ -30,10 +30,8 @@ public class StartSceneManager : MonoBehaviour
         {
             //All FX need to be less than invoke delay
             audioSource.PlayOneShot(SFX);
-            Instantiate(VFX, transform.position, Quaternion.identity);
-            titleCanvasGroup.DOFade(1, 2f).OnComplete(() => { // 使用DOTween使标题渐显
-                Invoke(nameof(LoadMainScene), 2f); // 渐显完成后等待2秒加载主游戏场景
-            });
+            // Instantiate(VFX, transform.position, Quaternion.identity);
+            FadeInTitle();
         }
     }
 
@@ -50,5 +48,20 @@ public class StartSceneManager : MonoBehaviour
     void LoadMainScene()
     {
         SceneManager.LoadScene("Game");
+    }
+    
+    private void SetTitleAlpha(float alpha)
+    {
+        Color newColor = titleSpriteRenderer.color;
+        newColor.a = alpha;
+        titleSpriteRenderer.color = newColor;
+    }
+
+    private void FadeInTitle()
+    {
+        // 使用DOTween渐显标题
+        titleSpriteRenderer.DOFade(1, 2f).OnComplete(() => {
+            Invoke(nameof(LoadMainScene), 2f); // 渐显完成后等待2秒加载主游戏场景
+        });
     }
 }

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LuBan_Mess.unity
     guid: 7f79aee2ecfdd4a8db1220fd450a9830
   - enabled: 1
+    path: Assets/Scenes/GameMainMenuTT.unity
+    guid: db3833bb46a5043499f6af19070b11d8
+  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 23dc9b31a12f4e840ac4621daf4fdf82
   - enabled: 0
@@ -27,8 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/GameTTrebuild.unity
     guid: 1a68d2a719afa4937bdc89a2725e2a44
   - enabled: 1
-    path: Assets/Scenes/GameMainMenuTT.unity
-    guid: db3833bb46a5043499f6af19070b11d8
+    path: Assets/Scenes/ShipFloating.unity
+    guid: 1575bfb51d0804c648c9b6050d88cf9e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e3eacc099f039486cbf0a77e4aedfb19,
       type: 2}
