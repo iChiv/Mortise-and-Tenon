@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Useless/LuBan_Mess.unity
     guid: 7f79aee2ecfdd4a8db1220fd450a9830
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameMainMenuTT.unity
     guid: db3833bb46a5043499f6af19070b11d8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 23dc9b31a12f4e840ac4621daf4fdf82
   - enabled: 0
