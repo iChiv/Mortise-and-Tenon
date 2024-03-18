@@ -52,11 +52,11 @@ namespace XR
                 // 触发关闭扇子的动画
                 fanAnimator.SetBool("FanOpen", false);
                 // 获取动画播放长度
-                // float animationLength = fanAnimator.GetCurrentAnimatorStateInfo(0).length;
+                float animationLength = fanAnimator.GetCurrentAnimatorStateInfo(0).length;
                 
                 // 动画播放完成后渐隐菜单内容
                 menuCanvasGroup2.DOFade(0, 0.5f);
-                menuCanvasGroup.DOFade(0, 0.5f).OnComplete(() =>
+                menuCanvasGroup.DOFade(0, animationLength).OnComplete(() =>
                 {
                     // 渐隐完成后禁用物体
                     menu.SetActive(false);
