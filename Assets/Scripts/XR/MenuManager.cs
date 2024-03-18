@@ -12,8 +12,6 @@ namespace XR
         [SerializeField] private GameObject tutorial;
         [SerializeField] private GameObject about;
         [SerializeField] private GameObject restartDialog;
-        // [SerializeField] private GameObject restartYesButton;
-        // [SerializeField] private GameObject restartNoButton;
         public Animator fanAnimator;
 
         void Start()
@@ -26,10 +24,6 @@ namespace XR
     
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                ToggleMenu();
-            }
             if (OVRInput.GetDown(OVRInput.Button.Start))
             {
                 ToggleMenu();
