@@ -98,11 +98,11 @@ namespace XR
         public void AboutUsButton()
         {
             tutorial.SetActive(false);
-            about.SetActive(true);
             menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
             {
                 // 渐隐完成后禁用物体
                 restartDialog.SetActive(false);
+                about.SetActive(true);
             });
         }
 
