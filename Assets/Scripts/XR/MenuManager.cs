@@ -1,82 +1,127 @@
-using System.Collections;
-using System.Collections.Generic;
-using Oculus.Platform;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
-public class MenuManager : MonoBehaviour
+namespace XR
 {
-    [SerializeField] private GameObject menu;
-    [SerializeField] private GameObject tutorial;
-    [SerializeField] private GameObject about;
-    [SerializeField] private GameObject restartDialog;
-    [SerializeField] private GameObject restartYesButton;
-    [SerializeField] private GameObject restartNoButton;
-    public Animator fanAnimator;
+    public class MenuManager : MonoBehaviour
+    {
+        [SerializeField] private GameObject menu;
+        [SerializeField] private CanvasGroup menuCanvasGroup;
+        [SerializeField] private CanvasGroup menuCanvasGroup2;
+        [SerializeField] private GameObject tutorial;
+        [SerializeField] private GameObject about;
+        [SerializeField] private GameObject restartDialog;
+        // [SerializeField] private GameObject restartYesButton;
+        // [SerializeField] private GameObject restartNoButton;
+        public Animator fanAnimator;
 
-    void Start()
-    {
-        ShowTutorial(); 
-    }
-    
-    void Update()
-    {
-        //播放开扇子动画
-        if (Input.GetKeyDown(KeyCode.Space))
+        void Start()
         {
-            fanAnimator.SetBool("FanOpen", true);
+            ShowTutorial();
+            menuCanvasGroup.alpha = 0; // 初始设置菜单内容透明度为0
+            menuCanvasGroup2.alpha = 0;
+            menu.SetActive(false); // 确保菜单初始状态为隐藏，但不影响Animator的播放
         }
-
-        if (OVRInput.GetDown(OVRInput.Button.Start))
+    
+        void Update()
         {
-            menu.SetActive(!menu.activeSelf);
-            if (menu.activeSelf)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                
-                ShowTutorial();
-                fanAnimator.SetBool("FanOpen", true);
-
+                ToggleMenu();
+            }
+            if (OVRInput.GetDown(OVRInput.Button.Start))
+            {
+                ToggleMenu();
             }
         }
-    }
 
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+        private void ToggleMenu()
+        {
+            if (menu.activeSelf)
+            {
+                // 触发关闭扇子的动画
+                fanAnimator.SetBool("FanOpen", false);
+                // 获取动画播放长度
+                // float animationLength = fanAnimator.GetCurrentAnimatorStateInfo(0).length;
+                
+                // 动画播放完成后渐隐菜单内容
+                menuCanvasGroup2.DOFade(0, 0.5f);
+                menuCanvasGroup.DOFade(0, 0.5f).OnComplete(() =>
+                {
+                    // 渐隐完成后禁用物体
+                    menu.SetActive(false);
+                });
+                
+            }
+            else
+            {
+                menu.SetActive(true);
+                // 播放开扇子动画
+                fanAnimator.SetBool("FanOpen", true);
+                // 等待动画播放一定时间后，再渐显菜单内容
+                DOVirtual.DelayedCall(0.5f, () => // 延迟时间根据实际动画调整
+                {
+                    menuCanvasGroup.DOFade(1, 0.5f); // 0.5秒内渐显
+                    ShowTutorial();
+                });
+            }
+        }
 
-    public void TutorialButton()
-    {
-        ShowTutorial();
-    }
+        public void Restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
-    public void RestartButton()
-    {
-        restartDialog.SetActive(true); // 显示重新开始对话框
-    }
+        public void TutorialButton()
+        {
+            ShowTutorial();
+        }
 
-    public void AboutUs()
-    {
-        tutorial.SetActive(false);
-        about.SetActive(true);
-        restartDialog.SetActive(false);
-    }
+        public void RestartButton()
+        {
+            restartDialog.SetActive(true); // 显示重新开始对话框
+            menuCanvasGroup2.DOFade(1, 0.5f); // 0.5秒内渐显
+            tutorial.SetActive(false);
+            about.SetActive(false);
+        }
 
-    public void OnRestartYesClicked()
-    {
-        Restart();
-    }
+        public void AboutUsButton()
+        {
+            tutorial.SetActive(false);
+            about.SetActive(true);
+            menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
+            {
+                // 渐隐完成后禁用物体
+                restartDialog.SetActive(false);
+            });
+        }
 
-    public void OnRestartNoClicked()
-    {
-        restartDialog.SetActive(false);
-        // 根据需要，您可以在这里重新显示教程或其他界面
-    }
+        public void OnRestartYesClicked()
+        {
+            Restart();
+        }
 
-    private void ShowTutorial()
-    {
-        tutorial.SetActive(true);
-        about.SetActive(false);
-        restartDialog.SetActive(false);
+        public void OnRestartNoClicked()
+        {
+            menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
+            {
+                // 渐隐完成后禁用物体
+                restartDialog.SetActive(false);
+                ShowTutorial();
+            });
+           
+        }
+
+        private void ShowTutorial()
+        {
+            tutorial.SetActive(true);
+            about.SetActive(false);
+            menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
+            {
+                // 渐隐完成后禁用物体
+                restartDialog.SetActive(false);
+            });
+        }
     }
 }

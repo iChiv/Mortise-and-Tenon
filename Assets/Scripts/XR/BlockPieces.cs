@@ -1,65 +1,60 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Oculus.Interaction;
-using Oculus.Interaction.HandGrab;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
-public class BlockPieces : MonoBehaviour
+namespace XR
 {
-    public Transform correctTransform;
-    private Outline outline;
-
-    public bool IsPositionedCorrectly { get; private set; } = false;
-
-    private bool isBeingDragged = false;
-
-    public Camera mainCamera;
-
-    private GameObject handGrab;
-
-    private GameObject distanceHandGrab;
-
-    public AudioClip snapClick;
-
-    private AudioSource audioSource;
-
-    private float pinchTime;
-    // [SerializeField]private float unsnapTime = 0.5f;
-    
-    private FlyToPlayer flyToPlayer;
-
-    void Start()
+    public class BlockPieces : MonoBehaviour
     {
-        audioSource = GetComponent<AudioSource>();
-        outline = GetComponent<Outline>();
+        public Transform correctTransform;
+        private Outline outline;
+
+        public bool IsPositionedCorrectly { get; private set; } = false;
+
+        private bool isBeingDragged = false;
+
+        public Camera mainCamera;
+
+        private GameObject handGrab;
+
+        private GameObject distanceHandGrab;
+
+        public AudioClip snapClick;
+
+        private AudioSource audioSource;
+
+        private float pinchTime;
+        // [SerializeField]private float unsnapTime = 0.5f;
+    
+        private FlyToPlayer flyToPlayer;
+
+        void Start()
+        {
+            audioSource = GetComponent<AudioSource>();
+            outline = GetComponent<Outline>();
         
-        handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; 
-        distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; 
-    }
+            handGrab = transform.Find("ISDK_HandGrabInteraction").gameObject; 
+            distanceHandGrab = transform.Find("ISDK_DistanceHandGrabInteraction").gameObject; 
+        }
     
-    void Update()
-    {
-        if (isBeingDragged)
+        void Update()
         {
-            return;
-        }
-
-        if (!IsPositionedCorrectly)
-        {
-            float distance = Vector3.Distance(transform.position, correctTransform.position);
-            float angle = Quaternion.Angle(transform.rotation, correctTransform.rotation);
-
-            if (distance < 0.1f && angle < 80f)
+            if (isBeingDragged)
             {
-                SnapIntoPlace();
+                return;
             }
-        }
-        else
-        {
-            /*
+
+            if (!IsPositionedCorrectly)
+            {
+                float distance = Vector3.Distance(transform.position, correctTransform.position);
+                float angle = Quaternion.Angle(transform.rotation, correctTransform.rotation);
+
+                if (distance < 0.1f && angle < 80f)
+                {
+                    SnapIntoPlace();
+                }
+            }
+            else
+            {
+                /*
             bool isPinching = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, OVRInput.Controller.RTouch) > 0.5f;
             
             if (isPinching)
@@ -76,45 +71,46 @@ public class BlockPieces : MonoBehaviour
                 }
             }
             */
+            }
         }
-    }
 
-    void SnapIntoPlace()
-    {
-        transform.position = correctTransform.position;
-        transform.rotation = correctTransform.rotation;
-        IsPositionedCorrectly = true;
-        handGrab.SetActive(false);
-        distanceHandGrab.SetActive(false);
+        void SnapIntoPlace()
+        {
+            transform.position = correctTransform.position;
+            transform.rotation = correctTransform.rotation;
+            IsPositionedCorrectly = true;
+            handGrab.SetActive(false);
+            distanceHandGrab.SetActive(false);
         
-        //VFX
+            //VFX
         
-        //SoundFX
-        audioSource.PlayOneShot(snapClick);
+            //SoundFX
+            audioSource.PlayOneShot(snapClick);
+        }
+
+        // void StartDragging()
+        // {
+        //     isBeingDragged = true;
+        //     IsPositionedCorrectly = false;
+        //     handGrab.SetActive(true);
+        //     distanceHandGrab.SetActive(true);
+        // }
+
+        // public void StopDragging()
+        // {
+        //     isBeingDragged = false;
+        // }
+
+        // private void OnTriggerEnter(Collider other)
+        // {
+        //     if (other.CompareTag("OVRHand"))
+        //     {
+        //         outline.enabled = true;
+        //     }
+        //     else
+        //     {
+        //         outline.enabled = false;
+        //     }
+        // }
     }
-
-    // void StartDragging()
-    // {
-    //     isBeingDragged = true;
-    //     IsPositionedCorrectly = false;
-    //     handGrab.SetActive(true);
-    //     distanceHandGrab.SetActive(true);
-    // }
-
-    // public void StopDragging()
-    // {
-    //     isBeingDragged = false;
-    // }
-
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.CompareTag("OVRHand"))
-    //     {
-    //         outline.enabled = true;
-    //     }
-    //     else
-    //     {
-    //         outline.enabled = false;
-    //     }
-    // }
 }

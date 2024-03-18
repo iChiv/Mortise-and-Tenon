@@ -1,49 +1,72 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
-public class ShipFloating : MonoBehaviour
+namespace XR
 {
-    public Transform[] pathPoints; // 路径点数组
-    public float moveDuration = 60f; // 完成一圈的时间
-    public float floatCycleTime = 2f; // 浮动周期
-    public float floatAmplitude = 0.5f; // 浮动幅度
-
-    private void Start()
+    public class ShipFloating : MonoBehaviour
     {
-        MoveShip();
-        SimulateFloating();
-    }
+        public Transform[] pathPoints; // 路径点数组
+        public float moveDuration = 60f; // 完成一圈的时间
+        public float floatCycleTime = 2f; // 浮动周期
+        public float floatAmplitude = 0.5f; // 浮动幅度
 
-    void MoveShip()
-    {
-        // 创建Vector3数组存储路径点位置
-        Vector3[] path = new Vector3[pathPoints.Length];
-        for (int i = 0; i < pathPoints.Length; i++)
+        private void Start()
         {
-            path[i] = pathPoints[i].position;
+            MoveAndRotateShip();
+            SimulateFloating();
         }
 
-        // 让船沿路径移动
-        transform.DOPath(path, moveDuration, PathType.CatmullRom)
-            .SetOptions(true)
-            .SetLookAt(0.01f)
-            .SetLoops(-1, LoopType.Restart)
-            .SetEase(Ease.Linear);
-    }
+        void MoveAndRotateShip()
+        {
+            Vector3[] pathPositions = new Vector3[pathPoints.Length];
+            Quaternion[] pathRotations = new Quaternion[pathPoints.Length];
+            for (int i = 0; i < pathPoints.Length; i++)
+            {
+                pathPositions[i] = pathPoints[i].position;
+                pathRotations[i] = pathPoints[i].rotation;
+            }
 
-    void SimulateFloating()
-    {
-        // 模拟浮动效果
-        transform.DOMoveY(transform.position.y + floatAmplitude, floatCycleTime)
-            .SetLoops(-1, LoopType.Yoyo)
-            .SetEase(Ease.InOutSine);
+            // 移动船只
+            var pathTween = transform.DOPath(pathPositions, moveDuration, PathType.CatmullRom)
+                .SetOptions(true)
+                .SetLoops(-1, LoopType.Restart)
+                .SetEase(Ease.Linear);
 
-        // 沿Z轴轻微摆动来模拟水流影响
-        // 使用DOBlendableLocalRotateBy确保旋转是相对于船的本地坐标系进行的
-        transform.DOBlendableLocalRotateBy(new Vector3(0, 0, 2), floatCycleTime, RotateMode.LocalAxisAdd)
-            .SetLoops(-1, LoopType.Yoyo)
-            .SetEase(Ease.InOutSine);
-    }
+            pathTween.OnWaypointChange(waypointIndex =>
+            {
+                if (waypointIndex < pathPoints.Length)
+                {
+                    // 在到达每个路径点时，更新船只的旋转以匹配路径点的旋转
+                    var targetRotation = pathRotations[waypointIndex];
+                    transform.DORotateQuaternion(targetRotation, floatCycleTime)
+                        .SetEase(Ease.InOutSine);
+                }
+            });
+        }
+
+
+        void SimulateFloating()
+        {
+            // 模拟浮动效果
+            transform.DOMoveY(transform.position.y + floatAmplitude, floatCycleTime)
+                .SetLoops(-1, LoopType.Yoyo)
+                .SetEase(Ease.InOutSine);
+        }
+
+        // int FindClosestPathPointIndex()
+        // {
+        //     int closestIndex = -1;
+        //     float closestDistance = float.MaxValue;
+        //     for (int i = 0; i < pathPoints.Length; i++)
+        //     {
+        //         float distance = Vector3.Distance(transform.position, pathPoints[i].position);
+        //         if (distance < closestDistance)
+        //         {
+        //             closestDistance = distance;
+        //             closestIndex = i;
+        //         }
+        //     }
+        //     return closestIndex;
+        // }
+    }   
 }
