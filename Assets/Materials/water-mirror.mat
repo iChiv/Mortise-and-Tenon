@@ -55,8 +55,8 @@ Material:
     - _waterspeed_01: 0
     m_Colors:
     - _albedo: {r: 0, g: 0, b: 0, a: 1}
-    - _uv1: {r: 10, g: 15, b: -0.4, a: -0.4}
-    - _uv2: {r: 12, g: 18, b: 0, a: 0}
+    - _uv1: {r: 25, g: 40, b: -0.4, a: -0.4}
+    - _uv2: {r: 22, g: 35, b: 0, a: 0}
     - _water_speed_1: {r: 0.02, g: 0.02, b: 0, a: 0}
     - _water_speed_2: {r: 0.04, g: 0.04, b: 0, a: 0}
   m_BuildTextureStacks: []
