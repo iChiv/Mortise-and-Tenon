@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using UnityEditor;
 
 namespace XR
 {
@@ -24,10 +25,24 @@ namespace XR
     
         void Update()
         {
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //{
+            //    menu.SetActive(true);
+            //    fanAnimator.SetBool("FanOpen", true);
+            //}
+
+            //if (Input.GetKeyDown(KeyCode.K))
+            //{
+            //    fanAnimator.SetBool("FanOpen", false);
+            //    menu.SetActive(false);
+            //}
+
             if (OVRInput.GetDown(OVRInput.Button.Start))
             {
                 ToggleMenu();
             }
+
+          
         }
 
         private void ToggleMenu()
