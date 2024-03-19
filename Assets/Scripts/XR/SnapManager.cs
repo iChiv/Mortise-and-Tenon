@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
@@ -292,6 +294,7 @@ namespace XR
             FadeAllText();
             var aftership = GetComponent<AfterShip>();
             aftership.AfterShipFinished();
+            StartCoroutine(MuteAudioAfterDelay(2));
         }
 
         private void FadeAllText()
@@ -332,6 +335,12 @@ namespace XR
                     Part4text.gameObject.SetActive(false);
                 });
             });
+        }
+        
+        IEnumerator MuteAudioAfterDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay); // 等待指定的秒数
+            audioSource.mute = true; // 静音音频
         }
     }
 }
