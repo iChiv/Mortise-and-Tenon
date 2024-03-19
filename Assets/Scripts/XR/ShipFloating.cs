@@ -30,6 +30,11 @@ namespace XR
                 pathPositions[i] = pathPoints[i].position;
                 pathRotations[i] = pathPoints[i].rotation;
             }
+            
+            if (pathRotations.Length > 0)
+            {
+                transform.rotation = pathRotations[0];
+            }
 
             // 移动船只
             var pathTween = transform.DOPath(pathPositions, moveDuration, PathType.CatmullRom)
