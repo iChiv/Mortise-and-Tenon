@@ -59,8 +59,8 @@ namespace XR
         private void FadeInTitle()
         {
             // 使用DOTween渐显标题
-            titleSpriteRenderer.DOFade(1, 2f).OnComplete(() => {
-                Invoke(nameof(LoadMainScene), 2f); // 渐显完成后等待2秒加载主游戏场景
+            titleSpriteRenderer.DOFade(1, 3f).OnComplete(() => {
+                Invoke(nameof(LoadMainScene), 5f); // 渐显完成后等待2秒加载主游戏场景
             });
         }
     }

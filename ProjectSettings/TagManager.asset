@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SamplesInfoPanel
   - OVRHand
+  - poem
   layers:
   - Default
   - TransparentFX
