@@ -9,7 +9,7 @@ namespace XR
     {
         [SerializeField] private GameObject menu;
         [SerializeField] private CanvasGroup menuCanvasGroup;
-        [SerializeField] private CanvasGroup menuCanvasGroup2;
+        //[SerializeField] private CanvasGroup menuCanvasGroup2;
         [SerializeField] private GameObject tutorial;
         [SerializeField] private GameObject about;
         [SerializeField] private GameObject restartDialog;
@@ -19,7 +19,7 @@ namespace XR
         {
             ShowTutorial();
             menuCanvasGroup.alpha = 0; // 初始设置菜单内容透明度为0
-            menuCanvasGroup2.alpha = 0;
+            //menuCanvasGroup2.alpha = 0;
             menu.SetActive(false); // 确保菜单初始状态为隐藏，但不影响Animator的播放
         }
     
@@ -55,8 +55,8 @@ namespace XR
                 float animationLength = fanAnimator.GetCurrentAnimatorStateInfo(0).length;
                 
                 // 动画播放完成后渐隐菜单内容
-                menuCanvasGroup2.DOFade(0, 0.5f);
-                menuCanvasGroup.DOFade(0, animationLength).OnComplete(() =>
+                //menuCanvasGroup2.DOFade(0, 0.5f);
+                menuCanvasGroup.DOFade(0, animationLength+1f).OnComplete(() =>
                 {
                     // 渐隐完成后禁用物体
                     menu.SetActive(false);
@@ -77,60 +77,60 @@ namespace XR
             }
         }
 
-        public void Restart()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        //    public void Restart()
+        //    {
+        //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //    }
 
-        public void TutorialButton()
-        {
-            ShowTutorial();
-        }
+        //    public void TutorialButton()
+        //    {
+        //        ShowTutorial();
+        //    }
 
-        public void RestartButton()
-        {
-            restartDialog.SetActive(true); // 显示重新开始对话框
-            menuCanvasGroup2.DOFade(1, 0.5f); // 0.5秒内渐显
-            tutorial.SetActive(false);
-            about.SetActive(false);
-        }
+        //    public void RestartButton()
+        //    {
+        //        restartDialog.SetActive(true); // 显示重新开始对话框
+        //        menuCanvasGroup2.DOFade(1, 0.5f); // 0.5秒内渐显
+        //        tutorial.SetActive(false);
+        //        about.SetActive(false);
+        //    }
 
-        public void AboutUsButton()
-        {
-            tutorial.SetActive(false);
-            menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
-            {
-                // 渐隐完成后禁用物体
-                restartDialog.SetActive(false);
-                about.SetActive(true);
-            });
-        }
+        //    public void AboutUsButton()
+        //    {
+        //        tutorial.SetActive(false);
+        //        menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
+        //        {
+        //            // 渐隐完成后禁用物体
+        //            restartDialog.SetActive(false);
+        //            about.SetActive(true);
+        //        });
+        //    }
 
-        public void OnRestartYesClicked()
-        {
-            Restart();
-        }
+        //    public void OnRestartYesClicked()
+        //    {
+        //        Restart();
+        //    }
 
-        public void OnRestartNoClicked()
-        {
-            menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
-            {
-                // 渐隐完成后禁用物体
-                restartDialog.SetActive(false);
-                ShowTutorial();
-            });
-           
-        }
+        //    public void OnRestartNoClicked()
+        //    {
+        //        menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
+        //        {
+        //            // 渐隐完成后禁用物体
+        //            restartDialog.SetActive(false);
+        //            ShowTutorial();
+        //        });
+
+        //    }
 
         private void ShowTutorial()
         {
             tutorial.SetActive(true);
             about.SetActive(false);
-            menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
-            {
-                // 渐隐完成后禁用物体
-                restartDialog.SetActive(false);
-            });
+            //menuCanvasGroup2.DOFade(0, 0.5f).OnComplete(() =>
+            //{
+            //    // 渐隐完成后禁用物体
+            //    restartDialog.SetActive(false);
+            //});
         }
     }
 }
