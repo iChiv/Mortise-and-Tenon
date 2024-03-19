@@ -1869,12 +1869,12 @@ PrefabInstance:
     - target: {fileID: 908920836161847681, guid: 38cb5c6af42354cfd91345a78bd5c684,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.127
+      value: 0.083
       objectReference: {fileID: 0}
     - target: {fileID: 908920836161847681, guid: 38cb5c6af42354cfd91345a78bd5c684,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.014
+      value: 0.017
       objectReference: {fileID: 0}
     - target: {fileID: 908920836161847681, guid: 38cb5c6af42354cfd91345a78bd5c684,
         type: 3}
@@ -2377,13 +2377,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400752760}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.175, y: 0.295, z: -0.074}
+  m_LocalRotation: {x: -0.13375273, y: 0.9910148, z: -0, w: 0}
+  m_LocalPosition: {x: -0.259, y: 0.157, z: -0.061}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1394666495}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -15.373}
 --- !u!95 &400752762
 Animator:
   serializedVersion: 5
@@ -3573,13 +3573,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689700003}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.295, y: 0.253, z: -0.065}
+  m_LocalRotation: {x: 0, y: -0.99965733, z: 0, w: 0.026177017}
+  m_LocalPosition: {x: 0.295, y: 0.253, z: -0.095}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1394666495}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -177, z: 0}
 --- !u!95 &689700005
 Animator:
   serializedVersion: 5
@@ -4663,44 +4663,6 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 2519146249628538864}
   _maxGrabPoints: 1
---- !u!84 &796022898
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1486
-  m_Height: 293
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 90
-  m_ColorFormat: 8
-  m_MipMap: 1
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1 &806794594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5811160786092694093, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
@@ -8814,6 +8776,44 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1404709585}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1420347971
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1110
+  m_Height: 772
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 90
+  m_ColorFormat: 8
+  m_MipMap: 1
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &1425854738
 GameObject:
   m_ObjectHideFlags: 0
@@ -12326,7 +12326,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 796022898}
+  m_TargetTexture: {fileID: 1420347971}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
