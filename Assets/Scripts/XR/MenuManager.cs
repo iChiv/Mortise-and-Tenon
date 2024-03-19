@@ -56,12 +56,17 @@ namespace XR
                 
                 // 动画播放完成后渐隐菜单内容
                 //menuCanvasGroup2.DOFade(0, 0.5f);
-                menuCanvasGroup.DOFade(0, animationLength+1f).OnComplete(() =>
+                //menuCanvasGroup.DOFade(0, animationLength+1f).OnComplete(() =>
+                //{
+                //    // 渐隐完成后禁用物体
+                //    menu.SetActive(false);
+                //});
+
+                DOVirtual.DelayedCall(animationLength+0.5f, () => // 延迟时间根据实际动画调整
                 {
-                    // 渐隐完成后禁用物体
                     menu.SetActive(false);
                 });
-                
+
             }
             else
             {
