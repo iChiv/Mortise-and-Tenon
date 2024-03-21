@@ -294,6 +294,7 @@ namespace XR
             FadeAllText();
             var aftership = GetComponent<AfterShip>();
             aftership.AfterShipFinished();
+            
             StartCoroutine(MuteAudioAfterDelay(2));
         }
 
