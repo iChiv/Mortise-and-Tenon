@@ -57,10 +57,6 @@ namespace XR
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
-            // if (stage == 1)
-            // {
-            //     EnableAllGrab();
-            // }
             EnableAllGrab();
         }
 

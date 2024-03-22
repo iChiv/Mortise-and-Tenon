@@ -38,7 +38,7 @@ namespace XR
 
             // 移动船只
             var pathTween = transform.DOPath(pathPositions, moveDuration, PathType.CatmullRom)
-                .SetOptions(true)
+                .SetOptions(false)
                 .SetEase(Ease.Linear);
 
             pathTween.OnWaypointChange(waypointIndex =>
