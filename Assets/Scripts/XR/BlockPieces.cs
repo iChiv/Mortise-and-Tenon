@@ -5,6 +5,9 @@ namespace XR
     public class BlockPieces : MonoBehaviour
     {
         public Transform correctTransform;
+
+        public float distanceSet = 0.1f;
+        public float angleSet = 80f;
         private Outline outline;
 
         public bool IsPositionedCorrectly { get; private set; } = false;
@@ -47,7 +50,7 @@ namespace XR
                 float distance = Vector3.Distance(transform.position, correctTransform.position);
                 float angle = Quaternion.Angle(transform.rotation, correctTransform.rotation);
 
-                if (distance < 0.1f && angle < 80f)
+                if (distance < distanceSet && angle < angleSet)
                 {
                     SnapIntoPlace();
                 }
