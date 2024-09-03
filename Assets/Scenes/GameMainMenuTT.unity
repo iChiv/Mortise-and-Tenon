@@ -239,13 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b9488e8346e6445b175d59f4d2cd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Offset: 0
-  m_LayerMask: -1
-  m_Scope: 0
-  m_Renderers: []
-  m_TextureScale: 1
-  m_AllowHDR: 1
-  m_AllowMSAA: 1
 --- !u!114 &19658747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,7 +1101,7 @@ RenderTexture:
   m_TextureSettings:
     serializedVersion: 2
     m_FilterMode: 1
-    m_Aniso: 1
+    m_Aniso: 0
     m_MipBias: 0
     m_WrapU: 1
     m_WrapV: 1
@@ -1558,6 +1551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 116544009}
+  distanceSet: 0.1
+  angleSet: 270
   mainCamera: {fileID: 1130914201}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!114 &808038111
@@ -2705,6 +2700,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 116544010}
+  distanceSet: 0.1
+  angleSet: 270
   mainCamera: {fileID: 1130914201}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!114 &1427161268

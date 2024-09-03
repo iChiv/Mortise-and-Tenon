@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.62540543, g: 0.6202477, b: 0.60896015, a: 1}
+  m_IndirectSpecularColor: {r: 0.62536573, g: 0.61816984, b: 0.6047462, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3376,7 +3376,6 @@ Transform:
   - {fileID: 7600380735295771688}
   - {fileID: 6623858664101802759}
   - {fileID: 1028126572837175208}
-  - {fileID: 1524619649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -38.805, z: 0}
 --- !u!1 &631962250
@@ -7348,7 +7347,7 @@ RenderTexture:
   m_TextureSettings:
     serializedVersion: 2
     m_FilterMode: 1
-    m_Aniso: 1
+    m_Aniso: 0
     m_MipBias: 0
     m_WrapU: 1
     m_WrapV: 1
@@ -9923,8 +9922,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524619648}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.3035056, z: -0, w: 0.95282966}
-  m_LocalPosition: {x: -0.476, y: 0.143, z: -2.169}
+  m_LocalRotation: {x: -0, y: -0.6028041, z: -0, w: 0.79788923}
+  m_LocalPosition: {x: 3.040327, y: 1.783, z: 0.35944617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9933,7 +9932,7 @@ Transform:
   - {fileID: 966453537}
   - {fileID: 165115511}
   - {fileID: 1631755428}
-  m_Father: {fileID: 618260808}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -35.337, z: 0}
 --- !u!1 &1526420613
 GameObject:
@@ -14561,7 +14560,7 @@ PrefabInstance:
     - target: {fileID: 7282744153929843728, guid: d59812f8280f442db81657d605cb4db9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.48
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 7282744153929843728, guid: d59812f8280f442db81657d605cb4db9,
         type: 3}
@@ -14879,6 +14878,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 227543253238424972, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 227543253238424972, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: snapClick
       value: 
       objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
@@ -14914,6 +14918,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4b58a891c594e2540b175aa9800fcdcb, type: 2}
     - target: {fileID: 1215294347836680892, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215294347836680892, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: snapClick
       value: 
       objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
@@ -14927,6 +14936,11 @@ PrefabInstance:
       propertyPath: correctTransform
       value: 
       objectReference: {fileID: 2925337343564507416}
+    - target: {fileID: 1242260112235875388, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
     - target: {fileID: 1242260112235875388, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
       propertyPath: snapClick
@@ -15124,6 +15138,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3525837881564856658, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525837881564856658, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: snapClick
       value: 
       objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
@@ -15172,6 +15191,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b58a891c594e2540b175aa9800fcdcb, type: 2}
+    - target: {fileID: 5563892778273443805, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
     - target: {fileID: 5563892778273443805, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
       propertyPath: snapClick
@@ -15234,6 +15258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7267158400238316487, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267158400238316487, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: snapClick
       value: 
       objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
@@ -15259,6 +15288,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7374634608392135939, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374634608392135939, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
       propertyPath: snapClick
       value: 
       objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
@@ -15272,6 +15306,11 @@ PrefabInstance:
       propertyPath: correctTransform
       value: 
       objectReference: {fileID: 4094861528079174563}
+    - target: {fileID: 7407929066344885357, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
     - target: {fileID: 7407929066344885357, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
       propertyPath: snapClick
@@ -15296,6 +15335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: part3_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558997182551574516, guid: 283568e59895447b6be49f5a3b7a3596,
+        type: 3}
+      propertyPath: angleSet
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 7558997182551574516, guid: 283568e59895447b6be49f5a3b7a3596,
         type: 3}
@@ -20884,7 +20928,7 @@ PrefabInstance:
     - target: {fileID: 4984075045692518539, guid: 2ae15c8d2e5de4d9494032ad44c08a91,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.47
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 4984075045692518539, guid: 2ae15c8d2e5de4d9494032ad44c08a91,
         type: 3}
@@ -22464,6 +22508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389634887745032252, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
         type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389634887745032252, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
+        type: 3}
       propertyPath: snapClick
       value: 
       objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
@@ -22529,6 +22578,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4b58a891c594e2540b175aa9800fcdcb, type: 2}
     - target: {fileID: 4975626318400378528, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
         type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 4975626318400378528, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
+        type: 3}
       propertyPath: snapClick
       value: 
       objectReference: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
@@ -22546,6 +22600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: part1_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880908871502339593, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
+        type: 3}
+      propertyPath: angleSet
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 6880908871502339593, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
         type: 3}
@@ -22612,6 +22671,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b58a891c594e2540b175aa9800fcdcb, type: 2}
+    - target: {fileID: 8828942881218069073, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
+        type: 3}
+      propertyPath: angleSet
+      value: 270
+      objectReference: {fileID: 0}
     - target: {fileID: 8828942881218069073, guid: c27b0dbaca49b4a64bdc5e79ee57def3,
         type: 3}
       propertyPath: snapClick
@@ -24040,7 +24104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 2107695297537824698}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &5487833673412718429
@@ -24363,7 +24427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 5579563797289706941}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &5665120743586771115
@@ -24793,7 +24857,7 @@ PrefabInstance:
     - target: {fileID: 2764505143144476314, guid: 5de67230ce19d43f58512a98195776c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.47
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 2764505143144476314, guid: 5de67230ce19d43f58512a98195776c3,
         type: 3}
@@ -24993,17 +25057,17 @@ PrefabInstance:
     - target: {fileID: 2007716346422115437, guid: 7a2d3fe98ea554dd584bccb0b1000634,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0010099008
+      value: 0.0010027608
       objectReference: {fileID: 0}
     - target: {fileID: 2007716346422115437, guid: 7a2d3fe98ea554dd584bccb0b1000634,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0010099008
+      value: 0.0010027608
       objectReference: {fileID: 0}
     - target: {fileID: 2007716346422115437, guid: 7a2d3fe98ea554dd584bccb0b1000634,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.00102
+      value: 0.0010127886
       objectReference: {fileID: 0}
     - target: {fileID: 2007716346422115437, guid: 7a2d3fe98ea554dd584bccb0b1000634,
         type: 3}
@@ -25013,7 +25077,7 @@ PrefabInstance:
     - target: {fileID: 2007716346422115437, guid: 7a2d3fe98ea554dd584bccb0b1000634,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.515
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 2007716346422115437, guid: 7a2d3fe98ea554dd584bccb0b1000634,
         type: 3}
@@ -25097,7 +25161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 4850386829723280361}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &5788479451479837768
@@ -26929,7 +26993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 1252179819535968960}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6238424558388104721
@@ -27399,7 +27463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 681923281192035167}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6349538426667457466
@@ -27847,7 +27911,7 @@ PrefabInstance:
     - target: {fileID: 8737923902790872561, guid: bbe5de30b03e846ca8cc070cc9ec91c0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.52
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 8737923902790872561, guid: bbe5de30b03e846ca8cc070cc9ec91c0,
         type: 3}
@@ -29990,7 +30054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 402907261371696862}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6535822613852055252
@@ -30737,7 +30801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 9064055993189555955}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6633601699052166173
@@ -31102,7 +31166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 561244717093035789}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &6714522310040590490
@@ -32692,7 +32756,7 @@ PrefabInstance:
     - target: {fileID: 3412919014071063591, guid: b5484e61238b445c5ace989b6b3a1263,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.568
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 3412919014071063591, guid: b5484e61238b445c5ace989b6b3a1263,
         type: 3}
@@ -32836,7 +32900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 784359911951638652}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &7008848416192824196
@@ -35433,7 +35497,7 @@ PrefabInstance:
     - target: {fileID: 947818643630113902, guid: 413b9a39a1135455cb6ee73c045abcee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.57
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 947818643630113902, guid: 413b9a39a1135455cb6ee73c045abcee,
         type: 3}
@@ -36879,7 +36943,7 @@ PrefabInstance:
     - target: {fileID: 1324946706694351709, guid: 61500e2f714a6472b86deb55722a93b9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.47
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 1324946706694351709, guid: 61500e2f714a6472b86deb55722a93b9,
         type: 3}
@@ -36965,7 +37029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 4139561183178752524}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &7952656419156244349
@@ -39498,7 +39562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 2369300181292325924}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8181294380532065491
@@ -40181,7 +40245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 4615112336277091299}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8491799017765599909
@@ -43714,7 +43778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 4199268506581502487}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8571110776257029398
@@ -45353,7 +45417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctTransform: {fileID: 2944677227494587931}
   distanceSet: 0.1
-  angleSet: 80
+  angleSet: 270
   mainCamera: {fileID: 1575691663}
   snapClick: {fileID: 8300000, guid: bb29a13e23a03c647b32f8ea482c6ff3, type: 3}
 --- !u!82 &8769953527113893630
@@ -48446,3 +48510,4 @@ SceneRoots:
   - {fileID: 1644048410}
   - {fileID: 909539556}
   - {fileID: 2102025290}
+  - {fileID: 1524619649}
